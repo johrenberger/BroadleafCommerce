@@ -1,0 +1,115 @@
+<comment th:remove="all" xmlns:th="http://www.w3.org/1999/html">
+    <!-- This component represents a list grid toolbar -->
+    <!-- Additional parameters that can be specified include: -->
+    <!--    hideActionButtons - if set to true, will not render the add/update/delete buttons -->
+</comment>
+
+<div class="listgrid-toolbar" th:if="${(hideActionButtons == null or hideActionButtons == 'false') and (listGrid.subCollectionFieldName != null)}">
+
+    <div class="listgrid-toolbar-actions"
+         th:unless="${#arrays.isEmpty(listGrid.activeToolbarActions)} and ${#arrays.isEmpty(listGrid.activeToolbarActionGroups)}">
+        <button type="button" class="button primary toolbar-action"
+                th:unless="${#arrays.isEmpty(listGrid.activeToolbarActions)}"
+                th:classappend="${action.buttonClass + ' ' + (action.requiresNonEmptyGrid ? 'non-empty-required' : '')}"
+                th:each="action,iterStat : ${listGrid.activeToolbarActions}"
+                th:attr="data-actionurl=@{${#strings.isEmpty(action.actionUrlOverride) ? (listGrid.path + action.urlPostfix) : action.actionUrlOverride} + ${listGrid.sectionCrumbRepresentation} + ${#strings.isEmpty(action.actionTargetEntity) ? '' : '&amp;entityType=' + action.actionTargetEntity}},
+                         data-urlpostfix=${action.urlPostfix},
+                         data-queryparams=${listGrid.sectionCrumbRepresentation},
+                         disabled=${action.actionId == 'SPLIT'} ? 'disabled'">
+            <th:block th:text="#{${action.displayText}}"></th:block>
+        </button>
+
+        <!-- Dropdown button if more than one toolbar action -->
+        <th:block th:unless="${#arrays.isEmpty(listGrid.activeToolbarActionGroups)}"
+                  th:each="actionGroup,iterStat : ${listGrid.activeToolbarActionGroups}">
+            <div class="button-group">
+                <button type="button" class="button primary toolbar-action dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <th:block th:text="#{${actionGroup.name}}"></th:block>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                    <th:block th:each="action,iterStat : ${actionGroup.getActiveActions(listGrid.isReadOnly)}">
+                        <li>
+                            <a class="toolbar-action"
+                               th:classappend="${action.buttonClass + ' ' + (action.requiresNonEmptyGrid ? 'non-empty-required' : '')}"
+                               th:attr="data-actionurl=@{${#strings.isEmpty(action.actionUrlOverride) ? (listGrid.path + action.urlPostfix) : action.actionUrlOverride} + ${listGrid.sectionCrumbRepresentation} + ${#strings.isEmpty(action.actionTargetEntity) ? '' : '&amp;entityType=' + action.actionTargetEntity}},
+                                     data-urlpostfix=${action.urlPostfix},
+                                     data-queryparams=${listGrid.sectionCrumbRepresentation},
+                                     disabled=${action.actionId == 'SPLIT'} ? 'disabled'">
+                                <th:block th:text="#{${action.displayText}}"></th:block>
+                            </a>
+                        </li>
+                    </th:block>
+                </ul>
+            </div>
+        </th:block>
+    </div>
+
+    <div class="listgrid-row-actions"
+         th:unless="${#arrays.isEmpty(listGrid.activeRowActions)} and ${#arrays.isEmpty(listGrid.activeRowActionGroups)}">
+        <button type="button" class="button primary row-action"
+                th:unless="${#arrays.isEmpty(listGrid.activeRowActions)}"
+                th:classappend="${action.buttonClass}"
+                th:each="action,iterStat : ${listGrid.activeRowActions}"
+                th:attr="data-actionurl=@{${#strings.isEmpty(action.actionUrlOverride) ? (listGrid.path + action.urlPostfix) : action.actionUrlOverride} + ${listGrid.sectionCrumbRepresentation} + ${#strings.isEmpty(action.actionTargetEntity) ? '' : '&amp;entityType=' + action.actionTargetEntity}},
+                         data-urlpostfix=${action.urlPostfix},
+                         data-queryparams=${listGrid.sectionCrumbRepresentation},
+                         data-confirm=${action.isConfirmEnabled},
+                         data-confirm-text=${action.confirmEnabledText},
+                         disabled=${action.actionId == 'SPLIT'} ? 'disabled'">
+            <th:block th:text="#{${action.displayText}}"></th:block>
+        </button>
+
+        <!-- Dropdown button if more than one row action -->
+        <th:block th:unless="${#arrays.isEmpty(listGrid.activeRowActionGroups)}"
+                  th:each="actionGroup,iterStat : ${listGrid.activeRowActionGroups}">
+            <div class="button-group">
+                <button type="button" class="button primary row-action dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <th:block th:text="#{${actionGroup.name}}"></th:block>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                    <th:block th:each="action,iterStat : ${actionGroup.getActiveActions(listGrid.isReadOnly)}">
+                        <li>
+                            <a class="row-action"
+                               th:classappend="${action.buttonClass}"
+                               th:attr="data-actionurl=@{${#strings.isEmpty(action.actionUrlOverride) ? (listGrid.path + action.urlPostfix) : action.actionUrlOverride} + ${listGrid.sectionCrumbRepresentation} + ${#strings.isEmpty(action.actionTargetEntity) ? '' : '&amp;entityType=' + action.actionTargetEntity}},
+                                        data-urlpostfix=${action.urlPostfix},
+                                        data-queryparams=${listGrid.sectionCrumbRepresentation},
+                                        disabled=${action.actionId == 'SPLIT'} ? 'disabled'">
+                                <th:block th:text="#{${action.displayText}}"></th:block>
+                            </a>
+                        </li>
+                    </th:block>
+                </ul>
+            </div>
+        </th:block>
+    </div>
+
+    <!-- Listgrid Filtering -->
+    <div class="filter-info" style="white-space: nowrap;" th:if="${listGrid.canFilterAndSort}">
+        <button type="button" class="button filter-button" th:inline="text" th:utext="#{Filter}" th:attr="data-hiddenid=${listGrid.jsonFieldName}"></button>
+
+        <div class="filter-builder-data" style="display: none;"
+             th:attr="data-hiddenid=${listGrid.jsonFieldName},
+                     data-containerid=${listGrid.friendlyName},
+                     data-fields=${listGrid.fieldWrapper.serialize()},
+                     data-data=${listGrid.dataWrapper.serialize()}">
+        </div>
+
+        <input type="hidden" th:id="'query-params-for-filters'+${listGrid.jsonFieldName}"
+               th:value="${queryParamsForFilters}"/>
+
+        <input type="hidden"
+               th:id="${listGrid.jsonFieldName}"
+               th:name="${listGrid.friendlyName}"
+               value="{&quot;data&quot;:[]}"/>
+
+        <div class="query-builder-filters-container" th:id="${listGrid.friendlyName}" style="display: none;"></div>
+    </div>
+</div>
+<div th:if="${(hideActionButtons == null or hideActionButtons == 'false') and (listGrid.subCollectionFieldName != null)}"
+     class="selectize-control multi filter-pillow-wrapper">
+
+    <div th:id="${'filter-pillow-container-' + listGrid.jsonFieldName}" class="selectize-input filter-pillow-container"></div>
+</div>

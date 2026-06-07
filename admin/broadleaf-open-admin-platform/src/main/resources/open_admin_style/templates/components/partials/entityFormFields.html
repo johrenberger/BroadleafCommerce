@@ -1,0 +1,79 @@
+<comment th:remove="all">
+<!-- *** IMPORTANT *** -->
+<!-- When changing this block of code, make sure standaloneField.html is also updated -->
+<!-- *** IMPORTANT *** -->
+</comment>
+<th:block th:if="${groupItem.isField()}" th:with="field=${groupItem.field}">
+    <div th:if="${field.name} and ${field.shouldRender} and ${#strings.isEmpty(field.associatedFieldName)}"
+         th:class="'field-group' + ${(field.isDirty ? ' dirty' : '')} + ${(field.disabled ? ' disabled' : '')} + ${(#fields.hasErrors('fields[__${field.name}__].value') ? ' has-error' : '')}"
+         blc_admin:component_id="${field}"
+         th:classappend="${!field.isVisible}? 'hidden'">
+
+        <th:block th:if="${field.fieldComponentRenderer == null or #strings.equals(field.fieldComponentRenderer, 'UNKNOWN')}">
+            <div th:replace="~{${'fields/' + #strings.toLowerCase(field.fieldType)}}"></div>
+        </th:block>
+        <th:block th:unless="${field.fieldComponentRenderer == null or #strings.equals(field.fieldComponentRenderer, 'UNKNOWN')}">
+            <div th:replace="~{${'fields/' + #strings.toLowerCase(field.fieldComponentRenderer)}}"></div>
+        </th:block>
+
+        <span th:if="${field.help}" class="field-help" th:utext="#{${field.help}}"></span>
+    </div>
+
+    <div th:if="${field.name} and ${field.shouldRender} and not ${#strings.isEmpty(field.associatedFieldName)}"
+         class="row associated-fields">
+        <div th:if="${field.name}"
+             th:class="'col6 field-group' + ${(field.isDirty ? ' dirty' : '')} + ${(field.disabled ? ' disabled' : '')} + ${(#fields.hasErrors('fields[__${field.name}__].value') ? ' has-error' : '')}"
+             blc_admin:component_id="${field}"
+             th:classappend="${!field.isVisible}? 'hidden'">
+            <div th:replace="~{${'fields/' + #strings.toLowerCase(field.fieldType)}}"></div>
+        </div>
+        <th:block th:with="associatedFieldName=${field.associatedFieldName}">
+            <div th:class="'col6 field-group' + ${(field.isDirty ? ' dirty' : '')} + ${(field.disabled ? ' disabled' : '')} + ${(#fields.hasErrors('fields[__${field.name}__].value') ? ' has-error' : '')}"
+                 th:classappend="${!field.isVisible}? 'hidden'"
+                 blc_admin:component_id="${field}"
+                 th:unless="*{fields['__${associatedFieldName}__']} == null"
+                 th:with="field=*{fields['__${associatedFieldName}__']}">
+                <div th:replace="~{${'fields/' + #strings.toLowerCase(field.fieldType)}}"></div>
+            </div>
+        </th:block>
+    </div>
+</th:block>
+
+<th:block th:if="${groupItem.isCustomField()}" th:with="field=${groupItem.field}">
+    <th:block th:if="${field.fieldComponentRenderer == null or #strings.equals(field.fieldComponentRenderer, 'UNKNOWN')}">
+        <div th:replace="~{${'fields/' + #strings.toLowerCase(field.fieldType)}}"></div>
+    </th:block>
+    <th:block th:unless="${field.fieldComponentRenderer == null or #strings.equals(field.fieldComponentRenderer, 'UNKNOWN')}">
+        <div th:replace="~{${'fields/' + #strings.toLowerCase(field.fieldComponentRenderer)}}"></div>
+    </th:block>
+</th:block>
+
+<th:block th:if="${groupItem.isListGrid()}" th:with="listGrid=${groupItem.listGrid}">
+    <div th:if="${listGrid.selectType} != 'selectize'"
+         th:id="${listGrid.subCollectionFieldName}"
+         class="listgrid-container fieldgroup-listgrid">
+        <div class="fieldgroup-listgrid-wrapper-header" th:classappend="${#lists.isEmpty(listGrid.records)} ? 'hidden-body'">
+            <span th:unless="${#strings.isEmpty(listGrid.friendlyName)}" class="listgrid-friendly-name" th:utext="#{${listGrid.friendlyName}}"></span>
+            <th:block th:unless="${listGrid.manualFetch}">
+                <span class="listgrid-total-records" th:if="${listGrid.totalRecords} == 1" th:text="'(' + ${listGrid.totalRecords} + #{listgrid.header.record} + ')'"></span>
+                <span class="listgrid-total-records" th:unless="${listGrid.totalRecords} == 1" th:text="'(' + ${listGrid.totalRecords} + #{listgrid.header.records} + ')'"></span>
+            </th:block>
+            <th:block th:if="${listGrid.manualFetch}">
+                <span class="listgrid-total-records" th:text="#{listgrid.manualFetch}"></span>
+            </th:block>
+            <th:block th:insert="~{components/listGridToolbar}" th:with="listGrid=${listGrid}"></th:block>
+            <th:block th:if="${listGrid.helpText}" != null>
+            <div class="field-help-listgrid" th:text="${listGrid.helpText}"></div>
+            </th:block>
+        </div>
+
+        <div class="fieldgroup-listgrid-wrapper" th:classappend="${#lists.isEmpty(listGrid.records)} ? 'hidden'">
+            <th:block th:insert="~{components/listGrid}" th:with="listGrid=${listGrid}, inModal=${inModal != null and inModal}"></th:block>
+        </div>
+    </div>
+    <div th:if="${listGrid.selectType} == 'selectize'"
+         class="field-group" th:id="${listGrid.subCollectionFieldName}">
+        <th:block th:insert="~{components/selectizeLabelBar}" th:with="listGrid=${listGrid}"></th:block>
+        <th:block th:insert="~{components/selectizeCollection}" th:with="listGrid=${listGrid}"></th:block>
+    </div>
+</th:block>

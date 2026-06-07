@@ -1,0 +1,29 @@
+<comment th:remove="all">
+<!-- This component represents a list grid toolbar -->
+<!-- Additional parameters that can be specified include: -->
+<!--    hideActionButtons - if set to true, will not render the add/update/delete buttons -->
+</comment>
+
+<label>
+
+    <span th:unless="${#strings.isEmpty(listGrid.friendlyName)}" th:classappend="${listGrid.hideFriendlyName} ? hidden : ''" class="label" th:utext="#{${listGrid.friendlyName}}"></span>
+
+    <span class="alert-wrapper" ></span>
+
+    <!-- Needs ListGrid Multi-Select to be useful for more than seeing the full scope of options -->
+    <th:block th:if="${(hideActionButtons == null or hideActionButtons == 'false') and (listGrid.subCollectionFieldName != null)}">
+
+        <th:block th:each="action : ${listGrid.activeToolbarActions}">
+            <a class="selectize-toolbar-action"
+               href="#"
+               th:classappend="${action.buttonClass}"
+               th:attr="data-actionurl=@{${#strings.isEmpty(action.actionUrlOverride) ? (listGrid.path + action.urlPostfix) : action.actionUrlOverride} + ${listGrid.sectionCrumbRepresentation}},
+               data-urlpostfix=${action.urlPostfix},
+               data-queryparams=${listGrid.sectionCrumbRepresentation}">
+                <i th:class="${action.iconClass}"></i>&nbsp;<span>Lookup</span>
+            </a>
+        </th:block>
+
+    </th:block>
+
+</label>

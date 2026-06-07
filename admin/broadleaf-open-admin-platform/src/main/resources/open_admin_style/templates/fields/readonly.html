@@ -1,0 +1,28 @@
+<label th:for="*{fields['__${field.name}__'].value}" th:classappend="${field.required ? 'required' : ''}" >
+    <span th:utext="#{${field.friendlyName}}"></span>
+<span th:replace="~{components/fieldTooltip}" ></span>
+</label>
+<div class="twelve" style="margin-left: 20px; margin-bottom: 10px;" th:switch="*{fields['__${field.name}__'].fieldType}">
+
+    <th:block th:case="'MEDIA'">
+        <a th:if="*{fields['__${field.name}__'].media != null and fields['__${field.name}__'].media.url != null and !#strings.isEmpty(fields['__${field.name}__'].media.url)}"
+            th:href="@{*{fields['__${field.name}__'].media.url}}" target="_blank">
+            <img class="thumbnail"
+                blc:src="@{*{fields['__${field.name}__'].media.url + '?largeAdminThumbnail'}}" />
+        </a>
+        <input type="hidden" th:field="*{fields['__${field.name}__'].value}" />
+    </th:block>
+
+    <th:block th:case="'ADDITIONAL_FOREIGN_KEY'">
+        <span th:text="*{fields['__${field.name}__'].displayValue}"></span>
+        <input type="hidden" class="display-value-property" th:value="*{fields['__${field.name}__'].foreignKeyDisplayValueProperty}"  />
+        <input type="hidden" class="value" th:field="*{fields['__${field.name}__'].value}" th:attr="data-onchangetrigger=${field.onChangeTrigger}" />
+        <input type="hidden" class="hidden-display-value" th:field="*{fields['__${field.name}__'].displayValue}" />
+    </th:block>
+
+    <th:block th:case="*">
+        <span th:text="*{fields['__${field.name}__'].displayValue}"></span>
+        <input type="hidden" th:field="*{fields['__${field.name}__'].value}" />
+    </th:block>
+    
+</div>

@@ -1,0 +1,162 @@
+<div id="content-title-bar" class="content-area-title-bar entity-form-actions" th:classappend="${entityCatalog != null} ? 'entityWithCatalog' : ''" >
+    <th:block th:if="${entityFriendlyName}" blc_admin:admin_section_href="${currentAdminSection}" >
+        <h3>
+            <span class="filter-text" style="display: none;">Filtered </span>
+            <span th:inline="text" class="admin-section">
+                [[#{#{${currentAdminSection.sectionKey}}}]]
+            </span>
+        </h3>
+        <h4 class="main-count">
+            <th:block th:unless="${totalTreeRecords} == null" th:text="${totalTreeRecords}" ></th:block>
+            <th:block th:if="${totalTreeRecords} == null" th:text="${listGrid.totalRecords}" ></th:block>
+            <th:block th:inline="text">
+                [[#{#{${currentAdminSection.sectionKey}}}]]
+            </th:block>
+        </h4>
+
+        <!-- Form for add new entity -->
+        <blc:form method="POST" id="add-entity-form" style="display:none;"></blc:form>
+
+        <!-- Dropdown button if more than one action -->
+        <div th:if="${not #lists.isEmpty(mainActions) and (#lists.size(mainActions) > 1 or #lists.size(entityTypes) > 1)}" class="button-group">
+            <img th:src="@{/img/admin/ajax-loader.gif}" class="ajax-loader" />
+            <th:block th:with="action=${mainActions[0]}">
+                <button type="button" class="button primary large disabled" disabled="disabled"
+                        th:if="${action.id == 'ADD'}"
+                        th:classappend="${action.buttonClass}"
+                        th:object="${entityTypes[0]}"
+                        th:attr="data-url=@{${!#strings.isEmpty(action.urlOverride) ? action.urlOverride : ('/' + sectionKey + action.urlPostfix)}(entityType=*{fullyQualifiedClassname})}">
+                    <th:block th:text="#{${action.displayText}}"></th:block>
+                    <th:block th:if="${action.displayText == 'Add'}" th:text="#{*{friendlyName}}"></th:block>
+                </button>
+                <button type="button" class="button primary large disabled" disabled="disabled"
+                        th:unless="${action.id == 'ADD'}"
+                        th:classappend="${action.buttonClass}"
+                        th:attr="data-url=@{${!#strings.isEmpty(action.urlOverride) ? action.urlOverride : ('/' + sectionKey + action.urlPostfix)}}">
+                    <th:block th:text="#{${action.displayText}}"></th:block>
+                    <th:block th:if="${action.displayText == 'Add'}" th:text="#{*{friendlyName}}"></th:block>
+                </button>
+            </th:block>
+            <button type="button" class="button primary large dropdown-toggle disabled" data-toggle="dropdown"
+                    aria-expanded="false" disabled="disabled">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <th:block th:each="action,iterStat : ${mainActions}">
+                    <li th:if="${action.id == 'ADD'}">
+                        <a th:class="${action.buttonClass}"
+                           th:attr="data-url=@{${!#strings.isEmpty(action.urlOverride) ? action.urlOverride : ('/' + sectionKey + action.urlPostfix)}(entityType=*{fullyQualifiedClassname})}"
+                           th:each="type,iterStat : ${entityTypes}" th:unless="${iterStat.first}" th:object="${type}"
+                           th:href="@{'/' + ${sectionKey + action.urlPostfix}(entityType=*{fullyQualifiedClassname})}">
+                            <th:block th:text="#{${action.displayText}}"></th:block>
+                            <th:block th:if="${action.displayText == 'Add'}" th:text="#{*{friendlyName}}"></th:block>
+                        </a>
+                    </li>
+                    <li th:unless="${action.id == 'ADD'}">
+                        <a th:class="${action.buttonClass}"
+                           th:attr="data-url=@{${!#strings.isEmpty(action.urlOverride) ? action.urlOverride : ('/' + sectionKey + action.urlPostfix)}}"
+                           th:href="@{'/' + ${sectionKey + action.urlPostfix}}">
+                            <th:block th:text="#{${action.displayText}}"></th:block>
+                            <th:block th:if="${action.displayText == 'Add'}" th:text="#{*{friendlyName}}"></th:block>
+                        </a>
+                    </li>
+                </th:block>
+            </ul>
+        </div>
+
+        <!-- Otherwise normal button if one action -->
+        <th:block th:unless="${not #lists.isEmpty(mainActions) and (#lists.size(mainActions) > 1 or #lists.size(entityTypes) > 1)}">
+            <th:block  th:each="action,iterStat : ${mainActions}">
+                <th:block th:if="${action.id == 'ADD'}">
+                    <button class="button primary large disabled" disabled="disabled"
+                       th:classappend="${action.buttonClass}"
+                       th:type="${action.buttonType}"
+                       th:href="@{'/' + ${sectionKey + action.urlPostfix}(entityType=${entityTypes[0].fullyQualifiedClassname})}"
+                       th:attr="data-url=@{'/' + ${sectionKey + action.urlPostfix}(entityType=${entityTypes[0].fullyQualifiedClassname})}">
+                        <th:block th:text="#{${action.displayText}}"></th:block>
+                        <th:block th:if="${action.displayText == 'Add'}" th:text="#{${entityFriendlyName}}"></th:block>
+                    </button>
+                </th:block>
+                <th:block th:unless="${action.id == 'ADD'}">
+                    <button class="button primary large disabled" disabled="disabled"
+                       th:classappend="${action.buttonClass}"
+                       th:type="${action.buttonType}"
+                       th:href="@{'/' + ${sectionKey + action.urlPostfix}}"
+                       th:attr="data-url=@{'/' + ${sectionKey + action.urlPostfix}}">
+                        <th:block th:text="#{${action.displayText}}"></th:block>
+                        <th:block th:if="${action.displayText == 'Add'}" th:text="#{${entityFriendlyName}}"></th:block>
+                    </button>
+                </th:block>
+            </th:block>
+        </th:block>
+
+    </th:block>
+
+    <th:block th:if="${entityForm}">
+       <th:block th:if="${entityFriendlyName == null}">
+            <a class="back-button" blc_admin:admin_section_href="${currentAdminSection}" >
+                <i class="fa fa-angle-left fa-2x"></i>&nbsp;&nbsp;&nbsp;
+                <h3>
+                    <span th:inline="text">
+                        [[#{${currentAdminSection.sectionKey}}]]
+                    </span>
+                </h3>
+            </a>
+            <h3 class="breadcrumb-divider">&nbsp;&nbsp;/&nbsp;&nbsp;</h3>
+            <h3 class="mainEntityName" th:text="${entityForm.mainEntityName}"></h3>
+            <span class="entityCatalogName" th:if="${entityCatalog != null}" th:utext="${'(' + entityCatalog.name + ')'}"></span>
+        </th:block>
+
+        <!-- Dropdown button if more than one action -->
+        <div th:if="${#lists.size(entityForm.actions) > 1}" class="button-group">
+            <img th:src="@{/img/admin/ajax-loader.gif}" class="ajax-loader" />
+            <button type="button" class="button primary large"
+                    th:classappend="${action.buttonClass}"
+                    th:each="action,iterStat : ${entityForm.actions}"
+                    th:if="${iterStat.index == #lists.size(entityForm.actions) - 1}"
+                    th:disabled="#{${action.displayText}} == 'Save'"
+                    th:attr="data-url=@{'/' + ${sectionKey + action.urlPostfix}},data-action=${action.urlPostfix},
+                         data-confirm=${action.isConfirmEnabled},
+                         data-confirm-text=${action.confirmEnabledText}">
+                <th:block th:text="#{${action.displayText}}"></th:block>
+            </button>
+            <button type="button" class="button primary large dropdown-toggle disabled" disabled="disabled" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li th:each="action,iterStat : ${entityForm.actions}" th:if="${iterStat.index != #lists.size(entityForm.actions) - 1}">
+                <a th:classappend="${action.buttonClass}"
+                   th:attr="data-url=@{'/' + ${sectionKey + action.urlPostfix}},data-action=${action.urlPostfix},
+                         data-confirm=${action.isConfirmEnabled},
+                         data-confirm-text=${action.confirmEnabledText}">
+                        <th:block th:text="#{${action.displayText}}"></th:block>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Otherwise normal button if one action -->
+        <th:block th:unless="${#lists.size(entityForm.actions) > 1}">
+            <button type="button" class="button primary large"
+                    th:each="action,iterStat : ${entityForm.actions}" th:if="${iterStat.index == #lists.size(entityForm.actions) - 1}"
+                    th:classappend="${action.buttonClass}"
+                    th:disabled="#{${action.displayText}} == 'Save'"
+                    th:attr="data-url=@{'/' + ${sectionKey + action.urlPostfix}},data-action=${action.urlPostfix},
+                         data-confirm=${action.isConfirmEnabled},
+                         data-confirm-text=${action.confirmEnabledText}">
+                <th:block th:text="#{${action.displayText}}"></th:block>
+            </button>
+        </th:block>
+    </th:block>
+
+    <div id="headerFlashAlertBoxContainer" th:classappend="${headerFlash == null ? 'hidden' : ''}">
+        <div id="headerFlashAlertBox" class="alert-box" th:classappend="${headerFlashAlert != null and headerFlashAlert ? 'alert' : 'success'}" th:inline="text">
+            <span class="alert-box-message" th:text="${headerFlash != null} ? #{${headerFlash}} : ''"></span>
+        </div>
+    </div>
+    <div id="headerChangeBoxContainer">
+        <div id="headerChangeBox" class="success" style="display: none;">
+            <span class="change-box-message"></span>
+        </div>
+    </div>
+</div>

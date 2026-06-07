@@ -1,0 +1,14 @@
+<label th:for="*{fields['__${field.name}__'].value}" th:classappend="${field.required ? 'required' : ''}">
+       <span th:utext="#{${field.friendlyName}}"></span>
+<span th:replace="~{components/fieldTooltip}" ></span>
+</label>
+<div class="changes" th:classappend="${group.column == 0} ? 'numeric-field'">
+       <input th:unless="*{fields['__${field.name}__'].isLargeEntry}" type="text"
+              th:disabled="${field.readOnly}"
+              th:required="${field.required}"
+              th:placeholder="${field.hint}"
+              th:field="*{fields['__${field.name}__'].value}"
+              th:classappend="${group.column == 0} ? 'numeric-field'"/>
+</div>
+
+<span class="error" th:errors="*{fields['__${field.name}__'].value}" ></span>

@@ -1,0 +1,37 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<th:block th:if="${#arrays.contains({'iw','ar','fa','ur'},session.blLocale.localeCode)}">
+<!--[if IE 8]>    <html class="no-js lt-ie9" th:attr="lang=${session.blLocale.localeCode}" dir="rtl"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" th:attr="lang=${session.blLocale.localeCode}" dir="rtl"> <!--<![endif]-->
+</th:block>
+<th:block th:unless="${#arrays.contains({'iw','ar','fa','ur'},session.blLocale.localeCode)}">
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+</th:block>
+
+<head th:replace="~{layout/partials/loginHead}" ></head>
+
+<body class="login">
+    <blc:google_end_tag_manager></blc:google_end_tag_manager>
+
+
+    <div class="login-box">
+        <div class="logo">
+            <img th:src="@{/img/admin/blc-logo-150.png}" />
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="messages" th:insert="~{${templateName}::messages}" ></div>
+
+        <div id="js-warning" th:text="#{admin.login.requiresJs}" onload="" ></div>
+
+        <div id="js-visible" style="display: none;">
+            <div th:replace="~{${templateName}::form}" ></div>
+        </div>
+
+    </div> <!--  /login-container -->
+
+</body>
+</html>

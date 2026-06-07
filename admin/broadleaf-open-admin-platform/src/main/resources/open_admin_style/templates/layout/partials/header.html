@@ -1,0 +1,81 @@
+<header class="site-bar">
+
+    <li th:replace="~{layout/partials/additionalHeaderMenu}" ></li>
+
+    <!--<div class="alert-box">-->
+        <!--<div class="dropdown">-->
+            <!--<div class="dropdown-toggle" id="notifications" data-toggle="dropdown" aria-expanded="true">-->
+                <!--<i class="fa fa-bell"></i>-->
+            <!--</div>-->
+            <!--<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="notifications">-->
+                <!--<li class="notification new">Your change to Hot Sauce Name was approved <div class="time-ago">2 hours ago</div> </li>-->
+                <!--<li class="notification new alt">A change was assigned to you to approve <div class="time-ago">10 hours ago</div> </li>-->
+                <!--<li class="notification new">A comment was left on your change to Hot Sauce Name <div class="time-ago">Yesterday</div> </li>-->
+                <!--<li class="notification">The deployment named Winter Closeout Changes deployed without errors <div class="time-ago">A week ago</div> </li>-->
+                <!--<li class="notification">All your changes were grouped into the Winter Closeout Changes deployment <div class="time-ago">Two weeks ago</div> </li>-->
+                <!--<li class="see-all"><a href="">See All Updates</a></li>-->
+            <!--</ul>-->
+        <!--</div> &lt;!&ndash; /account-info &ndash;&gt;-->
+    <!--</div>-->
+
+    <div class="account-info dropdown">
+            <div class="dropdown-toggle" id="accountdrop" data-toggle="dropdown" aria-expanded="true">
+                <span th:text="'Welcome ' + ${#admin_user.getUser().name} + '!'"></span>
+                <span class="caret"></span>
+            </div>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="accountdrop">
+            <li><a th:href="@{/changePassword}" class="change-password">Change Password</a></li>
+            <li><a th:href="@{/adminLogout.htm}" th:utext="#{header.logout}">Logout</a></li>
+        </ul>
+    </div>
+    
+    <div class="language-selector dropdown">
+        <div class="dropdown-toggle" id="languagedrop" data-toggle="dropdown" aria-expanded="true">
+            <span th:text="${session.blLocale.friendlyName}"></span>
+        </div>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="languagedrop">
+            <li th:each="locale : ${@blLocaleService.findAllLocales()}">
+                <a class="add-url-param-click" th:attr="data-param=${locale.localeCode},data-prop=blLocaleCode" href="#"
+                   th:text="#{${locale.friendlyName}}"></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="timezone-selector dropdown">
+        <div class="dropdown-toggle" id="timezonedrop" data-toggle="dropdown" aria-expanded="true">
+            <span th:text="${session.blTimeZone.displayName} + ' (' + ${T(java.time.format.DateTimeFormatter).ofPattern('OOOO').format(T(java.time.ZonedDateTime).now(session.blTimeZone.toZoneId()))} + ')'"></span>
+        </div>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="timezonedrop">
+            <li th:each="timezone : ${@environment.getProperty('admin.available.timezone.codes', T(java.util.List))}">
+                <a class="add-url-param-click" th:attr="data-param=${timezone},data-prop=blTimeZoneCode" href="#"
+                   th:text="#{${timezone}}"></a>
+            </li>
+        </ul>
+    </div>
+
+    <th:block th:if="${customRibbon == null or #strings.equals(customRibbon, '')}">
+        <div th:replace="~{layout/partials/sandboxRibbon}"></div>
+    </th:block>
+    <th:block th:unless="${customRibbon == null or #strings.equals(customRibbon, '')}">
+        <div th:replace="~{${customRibbon}}"></div>
+    </th:block>
+</header>
+<div id="lightbox" style="display: none;">
+
+    <div id="expire-message" class="modal in sm">
+        <div id="expire-header" class="modal-header">
+            <h3 id="expire-header-message" th:text="#{header.session.expire}"></h3>
+        </div>
+        <div id="expire-content" class="modal-body">
+            <div id="expire-text-container">
+                <div id="expire-text"></div>
+                <br />
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a type="button" id="stay-logged-in" class="button primary" th:text="#{header.stay.logged.in}"></a>
+            <a type="button" id="session-logout" class="button secondary" th:href="@{/adminLogout.htm}" th:text="#{header.logout}"></a>
+        </div>
+    </div>
+    <div  class="modal-backdrop"></div>
+</div>

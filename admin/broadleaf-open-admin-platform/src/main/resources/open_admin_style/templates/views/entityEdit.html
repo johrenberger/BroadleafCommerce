@@ -1,0 +1,29 @@
+<th:block>
+    <th:block th:if="${entityFormTemplatePath == null and useAjaxUpdate == true}" >
+        <th:block th:insert="~{components/entityForm}"
+        th:with="additionalClasses='blc-admin-ajax-update',
+                 additionalTabClasses='entity-form',
+                 showSingleTab='false',
+                 hideActions='true',
+                 inModal=${inModal != null and inModal}" ></th:block>
+    </th:block>
+    
+    <th:block th:if="${entityFormTemplatePath == null and useAjaxUpdate != true}" >
+        <th:block th:insert="~{components/entityForm}"
+        th:with="additionalTabClasses='entity-form',
+                 showSingleTab='false',
+                 hideActions='true',
+                 inModal=${inModal != null and inModal}" ></th:block>
+    
+    </th:block>
+    
+    <th:block th:unless="${entityFormTemplatePath == null}" >
+        <th:block th:insert="~{${entityFormTemplatePath}}"
+              th:with="additionalTabClasses='entity-form',
+                       showSingleTab='false',
+                       hideActions='true',
+                       inModal=${inModal != null and inModal}"></th:block>
+    </th:block>
+    <input type="hidden" th:name="${@blExploitProtectionService.getCsrfTokenParameter()}" th:value="${@blExploitProtectionService.getCSRFToken()}" />
+    <input type="hidden" th:name="${@blStaleStateProtectionService.stateVersionTokenParameter}" th:value="${@blStaleStateProtectionService.stateVersionToken}" />
+</th:block>

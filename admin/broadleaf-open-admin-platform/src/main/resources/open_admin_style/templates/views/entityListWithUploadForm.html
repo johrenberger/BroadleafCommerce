@@ -1,0 +1,10 @@
+<blc:form method="post" class="uploadFileForm entityListWithUpload hidden"
+    enctype="multipart/form-data"  
+    th:action="@{${'/asset/uploadAsset'}}"
+    id="assetUploadForm">
+    
+    <span style="display: block; margin-bottom: 5px; margin-left: 60px;"><i class="blc-icon-product-image"></i> Upload Asset</span>
+    <input id="assetUploadFile" type="file" name="file" value="Upload Asset"/>
+</blc:form>
+    
+<th:block th:insert="~{views/entityList}"></th:block>

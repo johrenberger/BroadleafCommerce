@@ -1,0 +1,54 @@
+[plugins] plugins.allow is empty; discovered non-bundled plugins may auto-load: codex (/data/.openclaw/npm/projects/openclaw-codex-8902d781d4/node_modules/@openclaw/codex/dist/index.js). Set plugins.allow to explicit trusted ids.
+[plugins] plugins.allow is empty; discovered non-bundled plugins may auto-load: amazon-bedrock (/data/.openclaw/npm/projects/openclaw-amazon-bedrock-provider-53c77d25cd/node_modules/@openclaw/amazon-bedrock-provider/dist/index.js), amazon-bedrock-mantle (/data/.openclaw/npm/projects/openclaw-amazon-bedrock-mantle-provider-96310c0a41/node_modules/@openclaw/amazon-bedrock-mantle-provider/dist/index.js), anthropic-vertex (/data/.openclaw/npm/projects/openclaw-anthropic-vertex-provider-9a9ff48378/node_modules/@openclaw/anthropic-vertex-provider/dist/index.js), codex (/data/.openclaw/npm/projects/openclaw-codex-8902d781d4/node_modules/@openclaw/codex/dist/index.js). Set plugins.allow to explicit trusted ids.
+**Already completed** — this workflow was finished in the previous run.
+
+## Completion Summary
+
+### Final Onboarding Document
+`/tmp/BroadleafCommerce/docs/2026-06-06-broadleafcommerce-app-dev-discovery.md`
+
+### ADR Files
+- `/tmp/BroadleafCommerce/docs/adr/000-template.md`
+- `/tmp/BroadleafCommerce/docs/adr/001-current-architecture-baseline.md`
+
+### Validation Status
+**PASS** — All 16 evidence files created, all 18 onboarding sections present, all links commit-pinned.
+
+### Evidence Files (all present)
+```
+00-run-metadata.md
+01-file-inventory.md
+02-documentation-evidence.md
+03-stack-evidence.md
+04-structure-evidence.md
+05-components-evidence.md
+06-flows-evidence.md
+07-data-evidence.md
+08-dependencies-integrations-evidence.md
+09-api-evidence.md
+10-testing-evidence.md
+11-error-logging-evidence.md
+12-security-evidence.md
+13-build-deploy-evidence.md
+14-risk-hygiene-evidence.md
+15-contradiction-detection.md
+16-final-validation.md
+```
+
+### Top 5 Onboarding Files to Read First
+1. `core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/controller/cart/BroadleafCartController.java`
+2. `core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/Order.java`
+3. `core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/controller/checkout/` (directory)
+4. `pom.xml`
+5. `docs/adr/001-current-architecture-baseline.md`
+
+### Branch / Commit
+Runner handles branch creation and push. Branch: `docs/app-dev-discovery-2026-06-06`
+
+### Major Unknowns / Limitations
+- **Scale:** ~2985 Java files — large enterprise framework
+- **Database migrations:** No Flyway/Liquibase found; schema via JPA annotations + manual patches
+- **Docker:** Not in this repo
+- **CI details:** Jenkinsfile present but not reviewed
+- **Python e2e tests:** Not confirmed in this repo
+- **WebSocket usage:** Not confirmed

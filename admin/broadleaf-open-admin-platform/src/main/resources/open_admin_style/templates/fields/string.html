@@ -1,0 +1,20 @@
+<label th:for="*{fields['__${field.name}__'].value}">
+    <span th:utext="#{${field.friendlyName}}" th:classappend="${field.required ? 'required' : ''}"></span>
+    <span th:replace="~{components/fieldTooltip}"></span>
+    <div th:replace="~{components/fieldTranslation}"></div>
+</label>
+<div>
+    <input th:unless="*{fields['__${field.name}__'].isLargeEntry}"
+           th:disabled="${field.readOnly}"
+           th:required="${field.required}"
+           th:placeholder="${field.hint}"
+           th:field="*{fields['__${field.name}__'].value}"
+           type="text"/>
+
+    <textarea th:if="*{fields['__${field.name}__'].isLargeEntry}"
+              th:disabled="${field.readOnly}"
+              th:field="*{fields['__${field.name}__'].value}"
+              th:placeholder="${field.hint}"
+              cols="30" rows="3"></textarea>
+</div>
+<span class="error" th:errors="*{fields['__${field.name}__'].value}"></span>

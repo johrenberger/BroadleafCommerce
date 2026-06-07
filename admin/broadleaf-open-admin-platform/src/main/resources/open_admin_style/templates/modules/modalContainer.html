@@ -1,0 +1,78 @@
+<div class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" th:classappend="${modalClass}">
+    <div class="modal-header">
+    
+        <h3 id="myModalLabel" th:inline="text" th:switch="${modalHeaderType}">
+            <th:block th:case="'viewEntity'">
+                [[${entityForm.mainEntityName}]]
+                <small>
+                    <a th:href="@{${entityForm.sectionKey + '/' + entityForm.id}}" target="_blank">(Edit)</a>
+                </small>
+            </th:block>
+            
+            <th:block th:case="'addEntity'">
+                [[#{modal.title.addNew}]] [[#{${entityFriendlyName}}]]
+            </th:block>
+            
+            <th:block th:case="'addCollectionItem'">
+                [[#{modal.title.add}]]
+                <th:block th:if="${#strings.isEmpty(collectionProperty.metadata.addFriendlyName)}">
+                    <th:block th:if="${#strings.isEmpty(collectionProperty.metadata.friendlyName)}" th:text="#{${collectionProperty.metadata.name}}" ></th:block>
+                    <th:block th:unless="${#strings.isEmpty(collectionProperty.metadata.friendlyName)}" th:text="#{${collectionProperty.metadata.friendlyName}}" ></th:block>
+                </th:block>
+                <th:block th:unless="${#strings.isEmpty(collectionProperty.metadata.addFriendlyName)}" th:text="#{${collectionProperty.metadata.addFriendlyName}}"></th:block>
+            </th:block>
+            
+            <th:block th:case="'selectCollectionItem'">
+                [[#{modal.title.select}]]
+                <th:block th:if="${#strings.isEmpty(collectionProperty.metadata.friendlyName)}" th:text="#{${collectionProperty.metadata.name}}" ></th:block>
+                <th:block th:unless="${#strings.isEmpty(collectionProperty.metadata.friendlyName)}" th:text="#{${collectionProperty.metadata.friendlyName}}" ></th:block>
+            </th:block>
+            
+            <th:block th:case="'updateCollectionItem'">
+                [[#{modal.title.update}]]
+                <th:block th:if="${#strings.isEmpty(collectionProperty.metadata.friendlyName)}" th:text="#{${collectionProperty.metadata.name}}" ></th:block>
+                <th:block th:unless="${#strings.isEmpty(collectionProperty.metadata.friendlyName)}" th:text="#{${collectionProperty.metadata.friendlyName}}" ></th:block>
+            </th:block>
+
+            <th:block th:case="'viewCollectionItem'">
+                [[#{modal.title.view}]]
+                <th:block th:if="${#strings.isEmpty(collectionProperty.metadata.friendlyName)}" th:text="#{${collectionProperty.metadata.name}}" ></th:block>
+                <th:block th:unless="${#strings.isEmpty(collectionProperty.metadata.friendlyName)}" th:text="#{${collectionProperty.metadata.friendlyName}}" ></th:block>
+            </th:block>
+            
+            <th:block th:case="'translation'">
+                [[#{modal.title.fieldTranslations}]]
+            </th:block>
+            
+            <th:block th:case="'addTranslation'">
+                [[#{modal.title.addTranslation}]]
+            </th:block>
+            
+            <th:block th:case="'updateTranslation'">
+                [[#{modal.title.editTranslation}]]
+            </th:block>
+            
+            <th:block th:case="'selectAsset'">
+                [[#{modal.title.selectAsset}]]
+            </th:block>
+
+            <th:block th:case="'custom'">
+                <th:block th:utext="#{${modalTitle}}" ></th:block>
+            </th:block>
+
+            <th:block th:case="'customWithVar'" th:utext="#{${modalTitle}(${modalTitleVar})}">
+            </th:block>
+
+            <th:block th:case="*">
+                <th:block th:utext="#{modal.title.default}" ></th:block>
+            </th:block>
+        </h3>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    </div>
+    
+    <div class="modal-body">
+        <th:block th:insert="~{${'views/' + viewType}}" th:with="inModal=(${showActions == null}? true : false)"></th:block>
+    </div>
+    
+</div>
