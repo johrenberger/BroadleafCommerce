@@ -101,4 +101,46 @@ class DecrementInventoryRollbackHandlerSpec extends BaseCheckoutRollbackSpec{
         ex.message.equals("An unexpected error occured in the error handler of the checkout workflow trying to compensate"
                         +" for inventory. This happend for order ID: 3. This should be corrected manually!")
     }
+
+    def "Test that shouldExecute is triggered via EXTENDED_ROLLBACK_STATE key alone"() {
+        // No ROLLBACK_BLC_INVENTORY_DECREMENTED or ROLLBACK_BLC_INVENTORY_INCREMENTED set,
+        // but EXTENDED_ROLLBACK_STATE is present. The handler should still execute (no-op for
+        // inventory but should reach the if-blocks with null/empty maps).
+        stateConfiguration.put(DecrementInventoryRollbackHandler.EXTENDED_ROLLBACK_STATE, "BLC_EXTENDED_ROLLBACK_STATE_VALUE")
+        // OrderId is intentionally NOT set so the default "(Not Known)" string is used.
+
+        RollbackHandler rollbackHandler = new DecrementInventoryRollbackHandler().with() {
+            inventoryService = mockInventoryService
+            it
+        }
+        when:"rollbackState is executed with only the EXTENDED_ROLLBACK_STATE key set"
+        rollbackHandler.rollbackState(activity, context, stateConfiguration)
+
+        then:"no inventory calls are made (both maps are null)"
+        0 * mockInventoryService.incrementInventory(_, _)
+        0 * mockInventoryService.decrementInventory(_, _)
+    }
+
+    def "Test that the orderId defaults to (Not Known) when not set and the inventory call fails"() {
+        // EXTENDED_ROLLBACK_STATE present to trigger shouldExecute, no orderId set,
+        // no DECREMENTED map. INCREMENTED is set so incrementInventory is called and throws.
+        Map<Sku, Integer> inventoryToIncrement = new HashMap<Sku, Integer>()
+        Sku sku = new SkuImpl()
+        inventoryToIncrement.put(sku, new Integer(1))
+        stateConfiguration.put(DecrementInventoryRollbackHandler.ROLLBACK_BLC_INVENTORY_DECREMENTED, inventoryToIncrement)
+        stateConfiguration.put(DecrementInventoryRollbackHandler.EXTENDED_ROLLBACK_STATE, "SOME_STATE")
+        // No ROLLBACK_BLC_ORDER_ID set on purpose
+
+        RollbackHandler rollbackHandler = new DecrementInventoryRollbackHandler().with() {
+            inventoryService = mockInventoryService
+            it
+        }
+        when:"rollbackState is executed without an orderId"
+        rollbackHandler.rollbackState(activity, context, stateConfiguration)
+
+        then:"RollbackFailureException is thrown and the message contains '(Not Known)'"
+        1 * mockInventoryService.incrementInventory(_, _) >> { throw new Exception() }
+        RollbackFailureException ex = thrown(RollbackFailureException)
+        ex.message.contains("(Not Known)")
+    }
 }
