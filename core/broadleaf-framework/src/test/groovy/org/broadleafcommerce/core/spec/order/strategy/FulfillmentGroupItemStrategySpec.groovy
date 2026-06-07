@@ -622,20 +622,115 @@ class FulfillmentGroupItemStrategySpec extends Specification {
             it
         }
         testFgi.setOrderItem(testOi1)
-        
+
         testOrder.setOrderItems(Arrays.asList(testOi1))
-        
-        
+
+
         ArrayList<FulfillmentGroup> testFgs = new ArrayList<FulfillmentGroup>()
         testFgs.add(testFg)
         testOrder.setFulfillmentGroups(testFgs)
-        
+
         request.setOrder(testOrder)
         when:
         request = strategy.verify(request)
-        
+
         then:
         IllegalStateException e = thrown()
     }
-    
+
+    /**
+     * New test #1: verify() with a BundleOrderItem + DiscreteOrderItems where the
+     * bundle-quantity calculation is exercised (L353, L354, L356, L369) and the
+     * fgi quantities exactly match, so the third loop completes successfully and
+     * verify() returns the request (L394, L396). Also covers the
+     * setRemoveEmptyFulfillmentGroups setter (L406, L407).
+     */
+    def "verify() with a BundleOrderItem succeeds when fgi quantities match the bundle expansion"(){
+        setup:
+        Order testOrder = new OrderImpl()
+        strategy.isRemoveEmptyFulfillmentGroups() >> false
+
+        // Bundle with quantity 2, containing a DiscreteOrderItem with id=1 and quantity 3
+        // Expected oiQuantity for the doi = 2 * 3 = 6 (exercises the bundle-quantity branch).
+        BundleOrderItem boi = new BundleOrderItemImpl().with{
+            id = 10
+            quantity = 2
+            it
+        }
+        DiscreteOrderItem doi = new DiscreteOrderItemImpl().with{
+            id = 1
+            quantity = 3
+            bundleOrderItem = boi
+            it
+        }
+        boi.setDiscreteOrderItems(Arrays.asList(doi))
+
+        // fgi that matches the expected expanded quantity (6) for the doi
+        FulfillmentGroup testFg = new FulfillmentGroupImpl()
+        FulfillmentGroupItem testFgi = new FulfillmentGroupItemImpl().with{
+            quantity = 6
+            orderItem = doi
+            it
+        }
+        testFg.addFulfillmentGroupItem(testFgi)
+
+        testOrder.setOrderItems(Arrays.asList(boi))
+        ArrayList<FulfillmentGroup> testFgs = new ArrayList<FulfillmentGroup>()
+        testFgs.add(testFg)
+        testOrder.setFulfillmentGroups(testFgs)
+
+        request.setOrder(testOrder)
+
+        // exercise the setter too
+        strategy.setRemoveEmptyFulfillmentGroups(true)
+
+        when:
+        CartOperationRequest result = strategy.verify(request)
+
+        then:
+        noExceptionThrown()
+        result.is(request)
+    }
+
+    /**
+     * New test #2: onItemUpdated() for a non-Bundle OrderItem that has child order
+     * items. Exercises the second branch of the else-clause (L246-L251) which
+     * iterates over getChildOrderItems() and calls updateItemQuantity for each
+     * child with a per-quantity delta.
+     */
+    def "If orderItem is not a BundleOrderItem but has child order items, updateItemQuantity is called for each child"(){
+        setup: "non-bundle orderItem with two children, mock updateItemQuantity"
+        request.orderItemQuantityDelta = 2
+
+        OrderItem child1 = new OrderItemImpl().with{
+            id = 100
+            quantity = 4
+            it
+        }
+        OrderItem child2 = new OrderItemImpl().with{
+            id = 101
+            quantity = 6
+            it
+        }
+
+        OrderItemImpl parent = new OrderItemImpl().with{
+            id = 50
+            quantity = 2
+            it
+        }
+        parent.setChildOrderItems(Arrays.asList(child1, child2))
+
+        FulfillmentGroupItem fgiMarker = new FulfillmentGroupItemImpl()
+        strategy.updateItemQuantity(_, _, _) >> Arrays.asList(fgiMarker)
+
+        request.setOrderItem(parent)
+
+        when:
+        request = strategy.onItemUpdated(request)
+
+        then:
+        // One call for the parent, plus one per child (2 children) = 3 calls
+        request.getFgisToDelete().size() == 3
+    }
+
 }
