@@ -1,0 +1,140 @@
+{
+  "entry_points": [
+    {
+      "confidence": "high",
+      "framework": "Java",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/config/EnableBroadleafAdminAutoConfiguration.java",
+      "handler": "main",
+      "path": "common/src/main/java/org/broadleafcommerce/common/config/EnableBroadleafAdminAutoConfiguration.java",
+      "type": "java-main"
+    },
+    {
+      "confidence": "high",
+      "framework": "Java",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/config/EnableBroadleafAdminRootAutoConfiguration.java",
+      "handler": "main",
+      "path": "common/src/main/java/org/broadleafcommerce/common/config/EnableBroadleafAdminRootAutoConfiguration.java",
+      "type": "java-main"
+    },
+    {
+      "confidence": "high",
+      "framework": "Java",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/config/EnableBroadleafAdminServletAutoConfiguration.java",
+      "handler": "main",
+      "path": "common/src/main/java/org/broadleafcommerce/common/config/EnableBroadleafAdminServletAutoConfiguration.java",
+      "type": "java-main"
+    },
+    {
+      "confidence": "high",
+      "framework": "Java",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/config/EnableBroadleafSiteAutoConfiguration.java",
+      "handler": "main",
+      "path": "common/src/main/java/org/broadleafcommerce/common/config/EnableBroadleafSiteAutoConfiguration.java",
+      "type": "java-main"
+    },
+    {
+      "confidence": "high",
+      "framework": "Java",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/config/EnableBroadleafSiteRootAutoConfiguration.java",
+      "handler": "main",
+      "path": "common/src/main/java/org/broadleafcommerce/common/config/EnableBroadleafSiteRootAutoConfiguration.java",
+      "type": "java-main"
+    },
+    {
+      "confidence": "high",
+      "framework": "Java",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/config/EnableBroadleafSiteServletAutoConfiguration.java",
+      "handler": "main",
+      "path": "common/src/main/java/org/broadleafcommerce/common/config/EnableBroadleafSiteServletAutoConfiguration.java",
+      "type": "java-main"
+    },
+    {
+      "confidence": "high",
+      "framework": "Java",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/util/PomEvaluator.java",
+      "handler": "main",
+      "path": "common/src/main/java/org/broadleafcommerce/common/util/PomEvaluator.java",
+      "type": "java-main"
+    },
+    {
+      "confidence": "high",
+      "framework": "Java",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableAllFrameworkControllers.java",
+      "handler": "main",
+      "path": "common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableAllFrameworkControllers.java",
+      "type": "java-main"
+    },
+    {
+      "confidence": "high",
+      "framework": "Java",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableFrameworkControllers.java",
+      "handler": "main",
+      "path": "common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableFrameworkControllers.java",
+      "type": "java-main"
+    },
+    {
+      "confidence": "high",
+      "framework": "Java",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableFrameworkRestControllers.java",
+      "handler": "main",
+      "path": "common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableFrameworkRestControllers.java",
+      "type": "java-main"
+    },
+    {
+      "confidence": "high",
+      "framework": "Java",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/test/java/org/broadleafcommerce/test/common/rule/MvelOverloadFailureReproduction.java",
+      "handler": "main",
+      "path": "common/src/test/java/org/broadleafcommerce/test/common/rule/MvelOverloadFailureReproduction.java",
+      "type": "java-main"
+    },
+    {
+      "confidence": "high",
+      "framework": "Java",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/test/java/org/broadleafcommerce/test/common/rule/MvelOverloadWorkaroundReproduction.java",
+      "handler": "main",
+      "path": "common/src/test/java/org/broadleafcommerce/test/common/rule/MvelOverloadWorkaroundReproduction.java",
+      "type": "java-main"
+    },
+    {
+      "confidence": "high",
+      "framework": "Java",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/integration/src/test/java/org/broadleafcommerce/test/helper/AdminApplication.java",
+      "handler": "main",
+      "path": "integration/src/test/java/org/broadleafcommerce/test/helper/AdminApplication.java",
+      "type": "java-main"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring Boot",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableAllFrameworkControllers.java",
+      "handler": "application",
+      "path": "common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableAllFrameworkControllers.java",
+      "type": "spring-boot-app"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring Boot",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableFrameworkControllers.java",
+      "handler": "application",
+      "path": "common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableFrameworkControllers.java",
+      "type": "spring-boot-app"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring Boot",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableFrameworkRestControllers.java",
+      "handler": "application",
+      "path": "common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableFrameworkRestControllers.java",
+      "type": "spring-boot-app"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring Boot",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/integration/src/test/java/org/broadleafcommerce/test/helper/AdminApplication.java",
+      "handler": "application",
+      "path": "integration/src/test/java/org/broadleafcommerce/test/helper/AdminApplication.java",
+      "type": "spring-boot-app"
+    }
+  ]
+}

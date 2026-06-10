@@ -2,8 +2,8 @@
 
 - Workspace: /tmp/BroadleafCommerce
 - Repo: BroadleafCommerce
-- Date: 2026-06-06
-- Final doc: /tmp/BroadleafCommerce/docs/2026-06-06-broadleafcommerce-app-dev-discovery.md
+- Date: 2026-06-10
+- Final doc: /tmp/BroadleafCommerce/docs/2026-06-10-broadleafcommerce-app-dev-discovery.md
 
 ## Results
 
@@ -34,11 +34,13 @@
 | ✅ Mermaid diagrams present | PASS |
 | ✅ Discovery confidence scoring present | PASS |
 | ✅ Evidence files for recoverability (16/16) | PASS |
+| ✅ Analyzer JSON outputs present (15/15) | PASS |
+| ✅ LLM-only sections filled (no remaining AGENT_FILL_REQUIRED markers) | PASS |
 | ✅ Filename format yyyy-mm-dd-<repo>-app-dev-discovery.md | PASS |
 
 ## Summary
 
-- PASS: 26
+- PASS: 28
 - FAIL: 0
 
 **Validation: PASS** — ready to commit.

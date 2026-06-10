@@ -1,0 +1,12 @@
+{
+  "contradiction_candidates": [
+    {
+      "confidence": "medium",
+      "evidence_a": "tests were detected",
+      "evidence_b": "verify CI test execution",
+      "impact_hint": "possible documentation/configuration mismatch",
+      "needs_ai_interpretation": true,
+      "summary": "tests exist but CI does not appear to run them"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "checks": [
+    {
+      "check": "exists:analysis_manifest.json",
+      "status": true
+    },
+    {
+      "check": "json:analysis_manifest.json",
+      "status": true
+    },
+    {
+      "check": "urls:analysis_manifest.json",
+      "status": true
+    },
+    {
+      "check": "exists:repo_inventory.json",
+      "status": true
+    },
+    {
+      "check": "json:repo_inventory.json",
+      "status": true
+    },
+    {
+      "check": "urls:repo_inventory.json",
+      "status": true
+    },
+    {
+      "check": "exists:loc_metrics.json",
+      "status": true
+    },
+    {
+      "check": "json:loc_metrics.json",
+      "status": true
+    },
+    {
+      "check": "urls:loc_metrics.json",
+      "status": true
+    },
+    {
+      "check": "exists:tech_stack.json",
+      "status": true
+    },
+    {
+      "check": "json:tech_stack.json",
+      "status": true
+    },
+    {
+      "check": "urls:tech_stack.json",
+      "status": true
+    },
+    {
+      "check": "exists:entry_points.json",
+      "status": true
+    },
+    {
+      "check": "json:entry_points.json",
+      "status": true
+    },
+    {
+      "check": "urls:entry_points.json",
+      "status": true
+    },
+    {
+      "check": "exists:project_structure.json",
+      "status": true
+    },
+    {
+      "check": "json:project_structure.json",
+      "status": true
+    },
+    {
+      "check": "urls:project_structure.json",
+      "status": true
+    },
+    {
+      "check": "exists:routes.json",
+      "status": true
+    },
+    {
+      "check": "json:routes.json",
+      "status": true
+    },
+    {
+      "check": "urls:routes.json",
+      "status": true
+    },
+    {
+      "check": "exists:db_schema.json",
+      "status": true
+    },
+    {
+      "check": "json:db_schema.json",
+      "status": true
+    },
+    {
+      "check": "urls:db_schema.json",
+      "status": true
+    },
+    {
+      "check": "exists:dependencies.json",
+      "status": true
+    },
+    {
+      "check": "json:dependencies.json",
+      "status": true
+    },
+    {
+      "check": "urls:dependencies.json",
+      "status": true
+    },
+    {
+      "check": "exists:integrations.json",
+      "status": true
+    },
+    {
+      "check": "json:integrations.json",
+      "status": true
+    },
+    {
+      "check": "urls:integrations.json",
+      "status": true
+    },
+    {
+      "check": "exists:tests.json",
+      "status": true
+    },
+    {
+      "check": "json:tests.json",
+      "status": true
+    },
+    {
+      "check": "urls:tests.json",
+      "status": true
+    },
+    {
+      "check": "exists:error_logging.json",
+      "status": true
+    },
+    {
+      "check": "json:error_logging.json",
+      "status": true
+    },
+    {
+      "check": "urls:error_logging.json",
+      "status": true
+    },
+    {
+      "check": "exists:security_signals.json",
+      "status": true
+    },
+    {
+      "check": "json:security_signals.json",
+      "status": true
+    },
+    {
+      "check": "urls:security_signals.json",
+      "status": true
+    },
+    {
+      "check": "exists:build_deploy.json",
+      "status": true
+    },
+    {
+      "check": "json:build_deploy.json",
+      "status": true
+    },
+    {
+      "check": "urls:build_deploy.json",
+      "status": true
+    },
+    {
+      "check": "exists:hygiene_findings.json",
+      "status": true
+    },
+    {
+      "check": "json:hygiene_findings.json",
+      "status": true
+    },
+    {
+      "check": "urls:hygiene_findings.json",
+      "status": true
+    },
+    {
+      "check": "exists:contradiction_candidates.json",
+      "status": true
+    },
+    {
+      "check": "json:contradiction_candidates.json",
+      "status": true
+    },
+    {
+      "check": "urls:contradiction_candidates.json",
+      "status": true
+    },
+    {
+      "check": "exists:github_links.json",
+      "status": true
+    },
+    {
+      "check": "json:github_links.json",
+      "status": true
+    },
+    {
+      "check": "urls:github_links.json",
+      "status": true
+    },
+    {
+      "check": "manifest:tool_name",
+      "status": true
+    },
+    {
+      "check": "manifest:tool_version",
+      "status": true
+    },
+    {
+      "check": "manifest:timestamps",
+      "status": true
+    },
+    {
+      "check": "manifest:elapsed_ms",
+      "status": true
+    },
+    {
+      "check": "manifest:commit",
+      "status": true
+    },
+    {
+      "check": "inventory:has_files",
+      "status": true
+    },
+    {
+      "check": "inventory:paths",
+      "status": true
+    },
+    {
+      "check": "inventory:reviewed_files",
+      "status": true
+    },
+    {
+      "check": "warnings:collected",
+      "status": true
+    }
+  ],
+  "status": "passed",
+  "warnings": []
+}

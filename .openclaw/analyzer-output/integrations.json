@@ -1,0 +1,38 @@
+{
+  "integrations": [
+    {
+      "category": "identity",
+      "confidence": "high",
+      "evidence_paths": [
+        "pom.xml"
+      ],
+      "evidence_urls": [
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/pom.xml"
+      ],
+      "technology": "JWT/session"
+    },
+    {
+      "category": "identity",
+      "confidence": "high",
+      "evidence_paths": [
+        "common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/FrameworkController.java",
+        "core/broadleaf-framework-web/pom.xml",
+        "core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/controller/account/BroadleafOauthRegisterController.java",
+        "core/broadleaf-profile-web/pom.xml",
+        "core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/core/form/RegisterCustomerForm.java",
+        "core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/core/security/RestApiCustomerStateFilter.java",
+        "pom.xml"
+      ],
+      "evidence_urls": [
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/FrameworkController.java",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework-web/pom.xml",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/controller/account/BroadleafOauthRegisterController.java",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/pom.xml",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/core/form/RegisterCustomerForm.java",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/core/security/RestApiCustomerStateFilter.java",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/pom.xml"
+      ],
+      "technology": "OAuth/OIDC/SAML"
+    }
+  ]
+}

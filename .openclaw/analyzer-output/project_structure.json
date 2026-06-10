@@ -1,0 +1,125 @@
+{
+  "notable_directories": [
+    {
+      "file_count": 64,
+      "path": "common/src/main/java/org/broadleafcommerce/common/util"
+    },
+    {
+      "file_count": 59,
+      "path": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain"
+    },
+    {
+      "file_count": 49,
+      "path": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain"
+    },
+    {
+      "file_count": 46,
+      "path": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain"
+    },
+    {
+      "file_count": 43,
+      "path": "common/src/main/java/org/broadleafcommerce/common/payment/service"
+    },
+    {
+      "file_count": 40,
+      "path": "common/src/main/java/org/broadleafcommerce/common/web"
+    },
+    {
+      "file_count": 39,
+      "path": "admin/broadleaf-open-admin-platform/src/main/resources/open_admin_style/js/admin/lib/plugins"
+    },
+    {
+      "file_count": 37,
+      "path": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain"
+    },
+    {
+      "file_count": 36,
+      "path": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/dto"
+    },
+    {
+      "file_count": 34,
+      "path": "admin/broadleaf-open-admin-platform/src/main/resources/open_admin_style/img/admin"
+    },
+    {
+      "file_count": 32,
+      "path": "admin/broadleaf-open-admin-platform/src/main/resources/open_admin_style/templates/fields"
+    },
+    {
+      "file_count": 30,
+      "path": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain"
+    },
+    {
+      "file_count": 28,
+      "path": "core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/processor"
+    },
+    {
+      "file_count": 28,
+      "path": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/service/discount/domain"
+    },
+    {
+      "file_count": 27,
+      "path": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/service/persistence/validation"
+    },
+    {
+      "file_count": 26,
+      "path": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/server/service/handler"
+    },
+    {
+      "file_count": 26,
+      "path": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/dao"
+    },
+    {
+      "file_count": 25,
+      "path": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/service"
+    },
+    {
+      "file_count": 24,
+      "path": "admin/broadleaf-open-admin-platform/src/main/resources/open_admin_style/templates/fields/filter"
+    },
+    {
+      "file_count": 24,
+      "path": "common/src/main/java/org/broadleafcommerce/common/config"
+    },
+    {
+      "file_count": 24,
+      "path": "common/src/main/java/org/broadleafcommerce/common/presentation"
+    },
+    {
+      "file_count": 24,
+      "path": "core/broadleaf-framework/src/main/resources/config/bc/jpa/domain"
+    },
+    {
+      "file_count": 23,
+      "path": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/service"
+    },
+    {
+      "file_count": 22,
+      "path": "common/src/main/java/org/broadleafcommerce/common/persistence"
+    },
+    {
+      "file_count": 22,
+      "path": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/dao"
+    }
+  ],
+  "reading_order": [
+    "README.md",
+    "pom.xml"
+  ],
+  "top_level_entries": [
+    ".github",
+    ".gitignore",
+    ".openclaw",
+    "ISSUES.md",
+    "Jenkinsfile",
+    "README.md",
+    "admin",
+    "app-dev-discovery-2026-06-10",
+    "common",
+    "core",
+    "doc",
+    "docs",
+    "integration",
+    "licenses",
+    "pom.xml"
+  ]
+}

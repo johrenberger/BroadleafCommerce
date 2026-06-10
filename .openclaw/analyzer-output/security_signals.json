@@ -1,0 +1,447 @@
+{
+  "security_signals": [
+    {
+      "category": "authentication",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/pom.xml",
+      "redacted_snippet": "<artifactId>spring-security-config</artifactId>",
+      "severity": "medium",
+      "signal": "Spring Security",
+      "source_file": "admin/broadleaf-open-admin-platform/pom.xml"
+    },
+    {
+      "category": "authentication",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/pom.xml",
+      "redacted_snippet": "<artifactId>spring-security-web</artifactId>",
+      "severity": "medium",
+      "signal": "Spring Security",
+      "source_file": "common/pom.xml"
+    },
+    {
+      "category": "authentication",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/filter/SecurityBasedIgnoreFilter.java",
+      "redacted_snippet": "import org.springframework.security.web.SecurityFilterChain;",
+      "severity": "medium",
+      "signal": "Spring Security",
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/web/filter/SecurityBasedIgnoreFilter.java"
+    },
+    {
+      "category": "authentication",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework-web/pom.xml",
+      "redacted_snippet": "<artifactId>spring-security-oauth2-client</artifactId>",
+      "severity": "medium",
+      "signal": "Spring Security",
+      "source_file": "core/broadleaf-framework-web/pom.xml"
+    },
+    {
+      "category": "authentication",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/common/web/security/BroadleafAuthenticationFailureRedirectStrategy.java",
+      "redacted_snippet": "* Designed for use with SpringSecurity when errors are present.",
+      "severity": "medium",
+      "signal": "Spring Security",
+      "source_file": "core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/common/web/security/BroadleafAuthenticationFailureRedirectStrategy.java"
+    },
+    {
+      "category": "authentication",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/controller/account/BroadleafLoginController.java",
+      "redacted_snippet": "* this will cause the entire SpringSecurity pipeline to be fulfilled.",
+      "severity": "medium",
+      "signal": "Spring Security",
+      "source_file": "core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/controller/account/BroadleafLoginController.java"
+    },
+    {
+      "category": "authentication",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/controller/account/BroadleafRegisterController.java",
+      "redacted_snippet": "* this will cause the entire SpringSecurity pipeline to be fulfilled.",
+      "severity": "medium",
+      "signal": "Spring Security",
+      "source_file": "core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/controller/account/BroadleafRegisterController.java"
+    },
+    {
+      "category": "authentication",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/pom.xml",
+      "redacted_snippet": "<artifactId>spring-security-acl</artifactId>",
+      "severity": "medium",
+      "signal": "Spring Security",
+      "source_file": "core/broadleaf-profile-web/pom.xml"
+    },
+    {
+      "category": "authentication",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/core/service/login/LoginServiceImpl.java",
+      "redacted_snippet": "Authentication authentication = <redacted>.authenticate(<redacted-key>);",
+      "severity": "medium",
+      "signal": "authentication handler",
+      "source_file": "core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/core/service/login/LoginServiceImpl.java"
+    },
+    {
+      "category": "authentication",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/pom.xml",
+      "redacted_snippet": "<artifactId>spring-security-oauth2-client</artifactId>",
+      "severity": "medium",
+      "signal": "Spring Security",
+      "source_file": "pom.xml"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/service/user/AdminUserDetailsServiceImpl.java",
+      "redacted_snippet": "// Spring security expects everything to begin with ROLE_ for things like hasRole()",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/service/user/AdminUserDetailsServiceImpl.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/service/user/AdminUserProvisioningServiceImpl.java",
+      "redacted_snippet": "// Spring security expects everything to begin with ROLE_ for things like hasRole()",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/service/user/AdminUserProvisioningServiceImpl.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/payment/PaymentGatewayRequestType.java",
+      "redacted_snippet": "* {@link org.broadleafcommerce.common.payment.service.PaymentGatewayTransactionService#authorize(org.broadleafcommerce.common.payment.dto.PaymentRequestDTO)}",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/payment/PaymentGatewayRequestType.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/payment/PaymentTransactionType.java",
+      "redacted_snippet": "* @see {@link #AUTHORIZE}",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/payment/PaymentTransactionType.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/payment/dto/PaymentResponseDTO.java",
+      "redacted_snippet": "* for sale/authorize transactions, this will be the Credit Card object that was charged. This data is useful for showing",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/payment/dto/PaymentResponseDTO.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/payment/service/AbstractPaymentGatewayTransactionService.java",
+      "redacted_snippet": "public PaymentResponseDTO authorize(PaymentRequestDTO paymentRequestDTO) throws PaymentException {",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/payment/service/AbstractPaymentGatewayTransactionService.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/payment/service/PassthroughPaymentTransactionService.java",
+      "redacted_snippet": "public PaymentResponseDTO authorize(PaymentRequestDTO paymentRequestDTO) throws PaymentException {",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/payment/service/PassthroughPaymentTransactionService.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/payment/service/PaymentGatewayConfiguration.java",
+      "redacted_snippet": "* 'Authorize' or 'Authorize and Capture'</p>",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/payment/service/PaymentGatewayConfiguration.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/payment/service/PaymentGatewayTransactionService.java",
+      "redacted_snippet": "* For example, a module can implement the AUTHORIZE method:",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/payment/service/PaymentGatewayTransactionService.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/payment/service/PaymentGatewayTransparentRedirectService.java",
+      "redacted_snippet": "* Credit Card that can be used on subsequent requests) outside the scope of an authorize or sale transaction.</p>",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/payment/service/PaymentGatewayTransparentRedirectService.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/BroadleafRequestContext.java",
+      "redacted_snippet": "protected Boolean isAdmin = false;",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/web/BroadleafRequestContext.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/payment/processor/TRCreditCardExtensionHandler.java",
+      "redacted_snippet": "* and call their implementing TransparentRedirectService to generate either an Authorize",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/web/payment/processor/TRCreditCardExtensionHandler.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/resources/esapi/ESAPI.properties",
+      "redacted_snippet": "ESAPI.AccessControl=org.owasp.esapi.reference.DefaultAccessController",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "common/src/main/resources/esapi/ESAPI.properties"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/checkout/service/gateway/PassthroughPaymentRollbackServiceImpl.java",
+      "redacted_snippet": "LOG.trace(\"Passthrough Payment Gateway - Rolling back authorize transaction with amount: \"",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/checkout/service/gateway/PassthroughPaymentRollbackServiceImpl.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/checkout/service/strategy/OrderPaymentConfirmationStrategy.java",
+      "redacted_snippet": "* then it will attempt to either \"Authorize\" or \"Authorize and Capture\" it at this time.",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/checkout/service/strategy/OrderPaymentConfirmationStrategy.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/checkout/service/strategy/OrderPaymentConfirmationStrategyImpl.java",
+      "redacted_snippet": "* - If PaymentType == CREDIT_CARD -> AUTHORIZE or AUTHORIZE_AND_CAPTURE based on configuration of the gateway",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/checkout/service/strategy/OrderPaymentConfirmationStrategyImpl.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/checkout/service/workflow/ConfirmPaymentsRollbackHandler.java",
+      "redacted_snippet": "if (PaymentTransactionType.AUTHORIZE.equals(tx.getType())) {",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/checkout/service/workflow/ConfirmPaymentsRollbackHandler.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/checkout/service/workflow/ValidateAndConfirmPaymentActivity.java",
+      "redacted_snippet": "* <li>Verify that there is enough payment on the order via the <i>successful</i> amount on {@link PaymentTransactionType.AUTHORIZE} and",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/checkout/service/workflow/ValidateAndConfirmPaymentActivity.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/OrderPayment.java",
+      "redacted_snippet": "* can actually be added to this payment. For instance, there can only be a single {@link PaymentTransactionType#AUTHORIZE}",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/OrderPayment.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/OrderPaymentImpl.java",
+      "redacted_snippet": "if (PaymentTransactionType.AUTHORIZE.equals(tx.getType())",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/OrderPaymentImpl.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/PaymentTransaction.java",
+      "redacted_snippet": "* might first be a transaction for {@link PaymentTransactionType#AUTHORIZE} and then when the item is shipped there is",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/PaymentTransaction.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/PaymentTransactionImpl.java",
+      "redacted_snippet": "* instance, an AUTHORIZE would not have a parent but a CAPTURE must have an AUTHORIZE parent",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/PaymentTransactionImpl.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/service/DefaultPaymentGatewayCheckoutService.java",
+      "redacted_snippet": "// be an AUTHORIZE transaction, for instance)",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/service/DefaultPaymentGatewayCheckoutService.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/service/OrderPaymentStatusServiceImpl.java",
+      "redacted_snippet": ".add(payment.getSuccessfulTransactionAmountForType(PaymentTransactionType.AUTHORIZE));",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/service/OrderPaymentStatusServiceImpl.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/service/OrderToPaymentRequestDTOService.java",
+      "redacted_snippet": "* type {@link org.broadleafcommerce.common.payment.PaymentTransactionType#AUTHORIZE} might be passed into this method",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/service/OrderToPaymentRequestDTOService.java"
+    },
+    {
+      "category": "authorization",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/service/type/OrderPaymentStatus.java",
+      "redacted_snippet": "* transaction on the payment, but there is not yet a completed {@link org.broadleafcommerce.common.payment.PaymentTransactionType#AUTHORIZE}",
+      "severity": "medium",
+      "signal": "authorization check",
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/service/type/OrderPaymentStatus.java"
+    },
+    {
+      "category": "cors/csrf",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/dto/PersistencePackage.java",
+      "redacted_snippet": "protected String csrfToken;",
+      "severity": "low",
+      "signal": "CSRF",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/dto/PersistencePackage.java"
+    },
+    {
+      "category": "cors/csrf",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/security/service/ExploitProtectionServiceImpl.java",
+      "redacted_snippet": "private static final String CSRF_TOKEN = \"csrfToken\";",
+      "severity": "low",
+      "signal": "CSRF",
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/security/service/ExploitProtectionServiceImpl.java"
+    },
+    {
+      "category": "cors/csrf",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/processor/FormProcessor.java",
+      "redacted_snippet": "String csrfToken = eps.getCSRFToken();",
+      "severity": "low",
+      "signal": "CSRF",
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/web/processor/FormProcessor.java"
+    },
+    {
+      "category": "cors/csrf",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/resources/common_style/js/BLC.js",
+      "redacted_snippet": "if (options.data.indexOf('csrfToken') < 0) {",
+      "severity": "low",
+      "signal": "CSRF",
+      "source_file": "common/src/main/resources/common_style/js/BLC.js"
+    },
+    {
+      "category": "cors/csrf",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/processor/UncacheableDataProcessor.java",
+      "redacted_snippet": "attrMap.put(\"csrfToken\", eps.getCSRFToken());",
+      "severity": "low",
+      "signal": "CSRF",
+      "source_file": "core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/processor/UncacheableDataProcessor.java"
+    },
+    {
+      "category": "oauth/oidc/saml",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/FrameworkController.java",
+      "redacted_snippet": "* This concept was adapted from {@code @FrameworkEndpoint} from Spring Security OAuth 2.",
+      "severity": "medium",
+      "signal": "OAuth/OIDC/SAML",
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/FrameworkController.java"
+    },
+    {
+      "category": "oauth/oidc/saml",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework-web/pom.xml",
+      "redacted_snippet": "<artifactId>spring-security-oauth2-client</artifactId>",
+      "severity": "medium",
+      "signal": "OAuth/OIDC/SAML",
+      "source_file": "core/broadleaf-framework-web/pom.xml"
+    },
+    {
+      "category": "oauth/oidc/saml",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/controller/account/BroadleafOauthRegisterController.java",
+      "redacted_snippet": "import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;",
+      "severity": "medium",
+      "signal": "OAuth/OIDC/SAML",
+      "source_file": "core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/controller/account/BroadleafOauthRegisterController.java"
+    },
+    {
+      "category": "oauth/oidc/saml",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/pom.xml",
+      "redacted_snippet": "<artifactId>spring-security-oauth2-client</artifactId>",
+      "severity": "medium",
+      "signal": "OAuth/OIDC/SAML",
+      "source_file": "core/broadleaf-profile-web/pom.xml"
+    },
+    {
+      "category": "oauth/oidc/saml",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/core/form/RegisterCustomerForm.java",
+      "redacted_snippet": "import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;",
+      "severity": "medium",
+      "signal": "OAuth/OIDC/SAML",
+      "source_file": "core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/core/form/RegisterCustomerForm.java"
+    },
+    {
+      "category": "oauth/oidc/saml",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/core/security/RestApiCustomerStateFilter.java",
+      "redacted_snippet": "* in a trusted, secured network where no additional security is required. Or using OAuth or a similar trusted security model. Whatever security model is used,",
+      "severity": "medium",
+      "signal": "OAuth/OIDC/SAML",
+      "source_file": "core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/core/security/RestApiCustomerStateFilter.java"
+    },
+    {
+      "category": "oauth/oidc/saml",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/pom.xml",
+      "redacted_snippet": "<artifactId>spring-security-oauth2-client</artifactId>",
+      "severity": "medium",
+      "signal": "OAuth/OIDC/SAML",
+      "source_file": "pom.xml"
+    },
+    {
+      "category": "token/session",
+      "confidence": "medium",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/pom.xml",
+      "redacted_snippet": "<artifactId>nimbus-jose-jwt</artifactId>",
+      "severity": "medium",
+      "signal": "JWT",
+      "source_file": "pom.xml"
+    }
+  ],
+  "security_signals_total": 49,
+  "security_signals_truncated": false
+}

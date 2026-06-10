@@ -1,0 +1,933 @@
+{
+  "routes": [
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/action/AdminCatalogActionsController.java",
+      "handler": "AdminCatalogActionsController",
+      "method": "GET",
+      "path": "product/{productId}/{skusFieldName}/generate-skus",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/action/AdminCatalogActionsController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminBaseProductController.java",
+      "handler": "AdminBaseProductController",
+      "method": "GET",
+      "path": "/",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminBaseProductController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminBaseProductController.java",
+      "handler": "AdminBaseProductController",
+      "method": "GET",
+      "path": "/{id}",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminBaseProductController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminBundleProductController.java",
+      "handler": "AdminBundleProductController",
+      "method": "GET",
+      "path": "/",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminBundleProductController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminBundleProductController.java",
+      "handler": "AdminBundleProductController",
+      "method": "GET",
+      "path": "/{id}",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminBundleProductController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminCategoryController.java",
+      "handler": "AdminCategoryController",
+      "method": "GET",
+      "path": "/",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminCategoryController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminFieldController.java",
+      "handler": "AdminFieldController",
+      "method": "GET",
+      "path": "/",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminFieldController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminFieldController.java",
+      "handler": "AdminFieldController",
+      "method": "GET",
+      "path": "/selectize",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminFieldController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminOfferController.java",
+      "handler": "AdminOfferController",
+      "method": "GET",
+      "path": "/",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminOfferController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminOfferController.java",
+      "handler": "AdminOfferController",
+      "method": "GET",
+      "path": "/add",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminOfferController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminOfferController.java",
+      "handler": "AdminOfferController",
+      "method": "GET",
+      "path": "/{id}",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminOfferController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminOfferController.java",
+      "handler": "AdminOfferController",
+      "method": "POST",
+      "path": "/add",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminOfferController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminOfferController.java",
+      "handler": "AdminOfferController",
+      "method": "POST",
+      "path": "/{id}/duplicate",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminOfferController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminOrderController.java",
+      "handler": "AdminOrderController",
+      "method": "GET",
+      "path": "/",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminOrderController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminProductController.java",
+      "handler": "AdminProductController",
+      "method": "GET",
+      "path": "/",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminProductController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminProductController.java",
+      "handler": "AdminProductController",
+      "method": "GET",
+      "path": "/selectize",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminProductController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminProductController.java",
+      "handler": "AdminProductController",
+      "method": "GET",
+      "path": "/{id}",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminProductController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminProductController.java",
+      "handler": "AdminProductController",
+      "method": "GET",
+      "path": "/{id}/{collectionField:[^0-9].*}/{collectionItemId}",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminProductController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminProductController.java",
+      "handler": "AdminProductController",
+      "method": "GET",
+      "path": "/{id}/{collectionField}/add",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminProductController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/inventory/AdminInventoryBasicOperationsController.java",
+      "handler": "AdminInventoryBasicOperationsController",
+      "method": "GET",
+      "path": "/com.broadleafcommerce.inventory.advanced.domain.InventoryImpl",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/inventory/AdminInventoryBasicOperationsController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/inventory/AdminInventoryBasicOperationsController.java",
+      "handler": "AdminInventoryBasicOperationsController",
+      "method": "GET",
+      "path": "/{collectionField:.*}/select",
+      "source_file": "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/inventory/AdminInventoryBasicOperationsController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetController.java",
+      "handler": "AdminAssetController",
+      "method": "GET",
+      "path": "/",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetController.java",
+      "handler": "AdminAssetController",
+      "method": "GET",
+      "path": "/{id}",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetController.java",
+      "handler": "AdminAssetController",
+      "method": "POST",
+      "path": "/{id}",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetUploadController.java",
+      "handler": "AdminAssetUploadController",
+      "method": "GET",
+      "path": "/{addlSectionKey}/{id}/chooseAsset",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetUploadController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetUploadController.java",
+      "handler": "AdminAssetUploadController",
+      "method": "GET",
+      "path": "/{addlSectionKey}/{id}/uploadAsset",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetUploadController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetUploadController.java",
+      "handler": "AdminAssetUploadController",
+      "method": "GET",
+      "path": "/{id}/chooseAsset",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetUploadController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetUploadController.java",
+      "handler": "AdminAssetUploadController",
+      "method": "GET",
+      "path": "/{sectionKey}",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetUploadController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetUploadController.java",
+      "handler": "AdminAssetUploadController",
+      "method": "POST",
+      "path": "/uploadAsset",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetUploadController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetUploadController.java",
+      "handler": "AdminAssetUploadController",
+      "method": "POST",
+      "path": "/{id}/uploadAsset",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminAssetUploadController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminPageController.java",
+      "handler": "AdminPageController",
+      "method": "GET",
+      "path": "/",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminPageController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminPageController.java",
+      "handler": "AdminPageController",
+      "method": "GET",
+      "path": "/{id}",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminPageController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminPageController.java",
+      "handler": "AdminPageController",
+      "method": "GET",
+      "path": "/{propertyName}/dynamicForm",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminPageController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminPageController.java",
+      "handler": "AdminPageController",
+      "method": "POST",
+      "path": "/{id}",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminPageController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminStructuredContentController.java",
+      "handler": "AdminStructuredContentController",
+      "method": "GET",
+      "path": "/",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminStructuredContentController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminStructuredContentController.java",
+      "handler": "AdminStructuredContentController",
+      "method": "GET",
+      "path": "/{id}",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminStructuredContentController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminStructuredContentController.java",
+      "handler": "AdminStructuredContentController",
+      "method": "GET",
+      "path": "/{propertyName}/dynamicForm",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminStructuredContentController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminStructuredContentController.java",
+      "handler": "AdminStructuredContentController",
+      "method": "POST",
+      "path": "/{id}",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/admin/web/controller/AdminStructuredContentController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/web/PreviewTemplateController.java",
+      "handler": "PreviewTemplateController",
+      "method": "GET",
+      "path": "**",
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/web/PreviewTemplateController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminBasicErrorController.java",
+      "handler": "AdminBasicErrorController",
+      "method": "GET",
+      "path": "text/html",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminBasicErrorController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java",
+      "handler": "AdminLoginController",
+      "method": "GET",
+      "path": "/",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java",
+      "handler": "AdminLoginController",
+      "method": "GET",
+      "path": "/changePassword",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java",
+      "handler": "AdminLoginController",
+      "method": "GET",
+      "path": "/forgotPassword",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java",
+      "handler": "AdminLoginController",
+      "method": "GET",
+      "path": "/forgotUsername",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java",
+      "handler": "AdminLoginController",
+      "method": "GET",
+      "path": "/login",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java",
+      "handler": "AdminLoginController",
+      "method": "GET",
+      "path": "/resetPassword",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java",
+      "handler": "AdminLoginController",
+      "method": "POST",
+      "path": "/changePassword",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java",
+      "handler": "AdminLoginController",
+      "method": "POST",
+      "path": "/forgotUsername",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java",
+      "handler": "AdminLoginController",
+      "method": "POST",
+      "path": "/resetPassword",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java",
+      "handler": "AdminLoginController",
+      "method": "POST",
+      "path": "/sendResetPassword",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminLoginController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminTranslationController.java",
+      "handler": "AdminTranslationController",
+      "method": "GET",
+      "path": "/add",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminTranslationController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminTranslationController.java",
+      "handler": "AdminTranslationController",
+      "method": "GET",
+      "path": "/translation",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminTranslationController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminTranslationController.java",
+      "handler": "AdminTranslationController",
+      "method": "GET",
+      "path": "/update",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminTranslationController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminTranslationController.java",
+      "handler": "AdminTranslationController",
+      "method": "POST",
+      "path": "/add",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminTranslationController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminTranslationController.java",
+      "handler": "AdminTranslationController",
+      "method": "POST",
+      "path": "/delete",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminTranslationController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminTranslationController.java",
+      "handler": "AdminTranslationController",
+      "method": "POST",
+      "path": "/update",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminTranslationController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminUserManagementController.java",
+      "handler": "AdminUserManagementController",
+      "method": "GET",
+      "path": "/",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminUserManagementController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminUserManagementController.java",
+      "handler": "AdminUserManagementController",
+      "method": "GET",
+      "path": "/{id}",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminUserManagementController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminUserManagementController.java",
+      "handler": "AdminUserManagementController",
+      "method": "POST",
+      "path": "/{id}",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/AdminUserManagementController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/StaleStateController.java",
+      "handler": "StaleStateController",
+      "method": "GET",
+      "path": "/sc_conflict",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/StaleStateController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "GET",
+      "path": "/add",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "GET",
+      "path": "/selectize",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "GET",
+      "path": "/{collectionField:.*}/details",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "GET",
+      "path": "/{collectionField:.*}/{id}/view",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "GET",
+      "path": "/{id}",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "GET",
+      "path": "/{id}/{collectionField:[^0-9].*}",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "GET",
+      "path": "/{id}/{collectionField:[^0-9].*}/add",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "GET",
+      "path": "/{id}/{collectionField:[^0-9].*}/selectize",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "GET",
+      "path": "/{id}/{collectionField:[^0-9].*}/{collectionItemId}",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "GET",
+      "path": "/{id}/{collectionField:[^0-9].*}/{collectionItemId}/view",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "GET",
+      "path": "/{id}/{collectionField:[^0-9].*}/{collectionItemId}/{alternateId}",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "GET",
+      "path": "/{id}/{collectionField:[^0-9].*}/{collectionItemId}/{alternateId}/view",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "GET",
+      "path": "/{sectionKey:.+}",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/add",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/{id}",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/{id}/delete",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/{id}/duplicate",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/{id}/{collectionField:[^0-9].*}/add",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/{id}/{collectionField:[^0-9].*}/add/{collectionItemId}/verify",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/{id}/{collectionField:[^0-9].*}/addEmpty",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/{id}/{collectionField:[^0-9].*}/selectize-add",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/{id}/{collectionField:[^0-9].*}/{collectionItemId}",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/{id}/{collectionField:[^0-9].*}/{collectionItemId}/delete",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/{id}/{collectionField:[^0-9].*}/{collectionItemId}/sequence",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/{id}/{collectionField:[^0-9].*}/{collectionItemId}/{alternateId}",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/{id}/{collectionField:[^0-9].*}/{collectionItemId}/{alternateId}/delete",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/{id}/{collectionField:[^0-9].*}/{collectionItemId}/{alternateId}/sequence",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java",
+      "handler": "AdminBasicEntityController",
+      "method": "POST",
+      "path": "/{id}/{tab:[0-9]+}/{tabName}",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicEntityController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicOperationsController.java",
+      "handler": "AdminBasicOperationsController",
+      "method": "GET",
+      "path": "/sessionTimerReset",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicOperationsController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicOperationsController.java",
+      "handler": "AdminBasicOperationsController",
+      "method": "GET",
+      "path": "/update-navigation",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicOperationsController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicOperationsController.java",
+      "handler": "AdminBasicOperationsController",
+      "method": "GET",
+      "path": "/{owningClass:.*}/{collectionField:.*}/select",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicOperationsController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicOperationsController.java",
+      "handler": "AdminBasicOperationsController",
+      "method": "GET",
+      "path": "/{owningClass:.*}/{collectionField:.*}/typeahead",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicOperationsController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicOperationsController.java",
+      "handler": "AdminBasicOperationsController",
+      "method": "POST",
+      "path": "/logJavaScriptError",
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/web/controller/entity/AdminBasicOperationsController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/controller/account/BroadleafOauthRegisterController.java",
+      "handler": "BroadleafOauthRegisterController",
+      "method": "GET",
+      "path": "action=register",
+      "source_file": "core/broadleaf-framework-web/src/main/java/org/broadleafcommerce/core/web/controller/account/BroadleafOauthRegisterController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/CustomerPhoneController.java",
+      "handler": "CustomerPhoneController",
+      "method": "GET",
+      "path": "/myaccount/phone",
+      "source_file": "core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/CustomerPhoneController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/CustomerPhoneController.java",
+      "handler": "CustomerPhoneController",
+      "method": "GET",
+      "path": "deletePhone",
+      "source_file": "core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/CustomerPhoneController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/CustomerPhoneController.java",
+      "handler": "CustomerPhoneController",
+      "method": "GET",
+      "path": "makePhoneDefault",
+      "source_file": "core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/CustomerPhoneController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/CustomerPhoneController.java",
+      "handler": "CustomerPhoneController",
+      "method": "GET",
+      "path": "savePhone",
+      "source_file": "core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/CustomerPhoneController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/CustomerPhoneController.java",
+      "handler": "CustomerPhoneController",
+      "method": "GET",
+      "path": "viewPhone",
+      "source_file": "core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/CustomerPhoneController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/RegisterCustomerController.java",
+      "handler": "RegisterCustomerController",
+      "method": "GET",
+      "path": "registerCustomer",
+      "source_file": "core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/RegisterCustomerController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/RegisterCustomerController.java",
+      "handler": "RegisterCustomerController",
+      "method": "GET",
+      "path": "registerCustomerSuccess",
+      "source_file": "core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/RegisterCustomerController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/RegisterCustomerController.java",
+      "handler": "RegisterCustomerController",
+      "method": "POST",
+      "path": "registerCustomer",
+      "source_file": "core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/RegisterCustomerController.java"
+    },
+    {
+      "confidence": "high",
+      "framework": "Spring MVC",
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/RegisterCustomerController.java",
+      "handler": null,
+      "method": "GET",
+      "path": "/registerCustomer",
+      "source_file": "core/broadleaf-profile-web/src/main/java/org/broadleafcommerce/profile/web/controller/RegisterCustomerController.java"
+    }
+  ],
+  "routes_total": 103,
+  "routes_truncated": false
+}

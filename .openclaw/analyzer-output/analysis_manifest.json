@@ -1,0 +1,13 @@
+{
+  "commit": "06a6ae1b8a1d6a716d10b997bef726fc066afe85",
+  "elapsed_ms": 19446,
+  "end_time_utc": "2026-06-10T03:44:55.134061+00:00",
+  "output_dir": "/tmp/BroadleafCommerce/.openclaw/analyzer-output",
+  "repo_path": "/tmp/BroadleafCommerce",
+  "skipped_files": [],
+  "source_url_prefix": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/",
+  "start_time_utc": "2026-06-10T03:44:35.687551+00:00",
+  "tool_name": "repo-discovery-analyzer",
+  "tool_version": "0.1.0",
+  "warnings": []
+}

@@ -1,0 +1,190 @@
+{
+  "technologies": [
+    {
+      "category": "backend-framework",
+      "confidence": "high",
+      "evidence_path_count": 4,
+      "evidence_paths": [
+        "common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableAllFrameworkControllers.java",
+        "common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableFrameworkControllers.java",
+        "common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableFrameworkRestControllers.java",
+        "integration/src/test/java/org/broadleafcommerce/test/helper/AdminApplication.java"
+      ],
+      "evidence_paths_truncated": false,
+      "evidence_snippets": [],
+      "evidence_urls": [
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableAllFrameworkControllers.java",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableFrameworkControllers.java",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/web/controller/annotation/EnableFrameworkRestControllers.java",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/integration/src/test/java/org/broadleafcommerce/test/helper/AdminApplication.java"
+      ],
+      "technology": "Spring Boot",
+      "version": null
+    },
+    {
+      "category": "backend-framework",
+      "confidence": "high",
+      "evidence_path_count": 5,
+      "evidence_paths": [
+        "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/action/AdminCatalogActionsController.java",
+        "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminBaseProductController.java",
+        "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminBundleProductController.java",
+        "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminCategoryController.java",
+        "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminFieldController.java"
+      ],
+      "evidence_paths_truncated": false,
+      "evidence_snippets": [],
+      "evidence_urls": [
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/action/AdminCatalogActionsController.java",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminBaseProductController.java",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminBundleProductController.java",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminCategoryController.java",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/web/controller/entity/AdminFieldController.java"
+      ],
+      "technology": "Spring MVC",
+      "version": null
+    },
+    {
+      "category": "backend-framework",
+      "confidence": "high",
+      "evidence_path_count": 1,
+      "evidence_paths": [
+        "pom.xml"
+      ],
+      "evidence_paths_truncated": false,
+      "evidence_snippets": [
+        "<artifactId>spring-webmvc</artifactId>"
+      ],
+      "evidence_urls": [
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/pom.xml"
+      ],
+      "technology": "Spring MVC",
+      "version": null
+    },
+    {
+      "category": "cloud",
+      "confidence": "medium",
+      "evidence_path_count": 3,
+      "evidence_paths": [
+        "admin/broadleaf-open-admin-platform/src/main/resources/open_admin_style/js/admin/lib/plugins/spectrum.js",
+        "app-dev-discovery-2026-06-10/2026-06-10-BroadleafCommerce-app-dev-discovery.md",
+        "docs/2026-06-10-broadleafcommerce-app-dev-discovery.md"
+      ],
+      "evidence_paths_truncated": false,
+      "evidence_snippets": [],
+      "evidence_urls": [
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/resources/open_admin_style/js/admin/lib/plugins/spectrum.js",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/app-dev-discovery-2026-06-10/2026-06-10-BroadleafCommerce-app-dev-discovery.md",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/docs/2026-06-10-broadleafcommerce-app-dev-discovery.md"
+      ],
+      "technology": "Azure",
+      "version": null
+    },
+    {
+      "category": "cloud",
+      "confidence": "medium",
+      "evidence_path_count": 5,
+      "evidence_paths": [
+        "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/web/BroadleafProcessURLFilter.java",
+        "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/web/processor/ContentProcessor.java",
+        "admin/broadleaf-contentmanagement-module/src/test/resources/org/broadleafcommerce/sitemap/page/sitemap1.xml",
+        "admin/broadleaf-contentmanagement-module/src/test/resources/org/broadleafcommerce/sitemap/page/sitemap2.xml",
+        "pom.xml"
+      ],
+      "evidence_paths_truncated": false,
+      "evidence_snippets": [],
+      "evidence_urls": [
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/web/BroadleafProcessURLFilter.java",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/web/processor/ContentProcessor.java",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/test/resources/org/broadleafcommerce/sitemap/page/sitemap1.xml",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/test/resources/org/broadleafcommerce/sitemap/page/sitemap2.xml",
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/pom.xml"
+      ],
+      "technology": "GCP",
+      "version": null
+    },
+    {
+      "category": "database",
+      "confidence": "medium",
+      "evidence_path_count": 1,
+      "evidence_paths": [
+        "pom.xml"
+      ],
+      "evidence_paths_truncated": false,
+      "evidence_snippets": [
+        "<hibernate.version>5.6.15.Final</hibernate.version>"
+      ],
+      "evidence_urls": [
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/pom.xml"
+      ],
+      "technology": "Hibernate",
+      "version": null
+    },
+    {
+      "category": "language",
+      "confidence": "high",
+      "evidence_path_count": 1,
+      "evidence_paths": [
+        "admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/config/AdminModuleRegistration.java"
+      ],
+      "evidence_paths_truncated": false,
+      "evidence_snippets": [],
+      "evidence_urls": [
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-admin-module/src/main/java/org/broadleafcommerce/admin/config/AdminModuleRegistration.java"
+      ],
+      "technology": "Java",
+      "version": null
+    },
+    {
+      "category": "platform",
+      "confidence": "medium",
+      "evidence_path_count": 1,
+      "evidence_paths": [
+        "pom.xml"
+      ],
+      "evidence_paths_truncated": false,
+      "evidence_snippets": [
+        "<jakarta.version>6.0.0</jakarta.version>"
+      ],
+      "evidence_urls": [
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/pom.xml"
+      ],
+      "technology": "Jakarta",
+      "version": null
+    },
+    {
+      "category": "platform",
+      "confidence": "medium",
+      "evidence_path_count": 1,
+      "evidence_paths": [
+        "pom.xml"
+      ],
+      "evidence_paths_truncated": false,
+      "evidence_snippets": [
+        "<groupId>javax.persistence</groupId>"
+      ],
+      "evidence_urls": [
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/pom.xml"
+      ],
+      "technology": "Javax",
+      "version": null
+    },
+    {
+      "category": "security",
+      "confidence": "high",
+      "evidence_path_count": 1,
+      "evidence_paths": [
+        "pom.xml"
+      ],
+      "evidence_paths_truncated": false,
+      "evidence_snippets": [
+        "<artifactId>spring-security-oauth2-client</artifactId>"
+      ],
+      "evidence_urls": [
+        "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/pom.xml"
+      ],
+      "technology": "Spring Security",
+      "version": null
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "build_deploy": [
+    {
+      "artifact_type": "ci-config",
+      "commands_or_ports": [],
+      "confidence": "high",
+      "detected_runtime": null,
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/Jenkinsfile",
+      "path": "Jenkinsfile"
+    }
+  ]
+}

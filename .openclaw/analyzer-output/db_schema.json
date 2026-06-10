@@ -1,0 +1,3248 @@
+{
+  "entities": [
+    {
+      "confidence": "high",
+      "fields": [
+        "private Integer rank;",
+        "private String displayName;",
+        "private String profileUrl;",
+        "private String imageUrl;",
+        "private String accessToken;",
+        "private String secret;",
+        "private String refreshToken;",
+        "private Long expireTime;",
+        "private static final long serialVersionUID = 1L;",
+        "private String userId;",
+        "private String providerId;",
+        "private String providerUserId;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/social/domain/UserConnectionImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "UserConnectionImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/social/domain/UserConnectionImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private Long id;",
+        "private String term;",
+        "private String synonyms;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/SearchSynonymImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SearchSynonymImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/SearchSynonymImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final Log LOG = LogFactory.getLog(AdminPermissionImpl.class);",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String type;",
+        "protected String description;",
+        "protected Set<AdminRole> allRoles = new HashSet<>();",
+        "protected Set<AdminUser> allUsers = new HashSet<>();",
+        "protected List<AdminPermission> allChildPermissions = new ArrayList<AdminPermiss",
+        "protected List<AdminPermission> allParentPermissions = new ArrayList<AdminPermis",
+        "protected Boolean isFriendly = Boolean.FALSE;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/AdminPermissionImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "AdminPermissionImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToMany",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/AdminPermissionImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final Log LOG = LogFactory.getLog(AdminPermissionQualifiedEntityI",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String ceilingEntityFullyQualifiedName;",
+        "protected AdminPermission adminPermission;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/AdminPermissionQualifiedEntityImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "AdminPermissionQualifiedEntityImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/AdminPermissionQualifiedEntityImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final Log LOG = LogFactory.getLog(AdminRoleImpl.class);",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String description;",
+        "protected Set<AdminUser> allUsers = new HashSet<>();",
+        "protected Set<AdminPermission> allPermissions = new HashSet<>();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/AdminRoleImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "AdminRoleImpl",
+      "relationships": [
+        "@ManyToMany",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/AdminRoleImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final Log LOG = LogFactory.getLog(CatalogImpl.class);",
+        "protected Long id;",
+        "protected String name;",
+        "protected List<SiteCatalogXref> siteXrefs = new ArrayList<>();",
+        "protected List<Site> sites = new ArrayList<>();",
+        "protected ArchiveStatus archiveStatus = new ArchiveStatus();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/site/domain/CatalogImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CatalogImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/site/domain/CatalogImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final Log LOG = LogFactory.getLog(FulfillmentGroupItemImpl.class)",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected FulfillmentGroup fulfillmentGroup;",
+        "protected OrderItem orderItem;",
+        "protected int quantity;",
+        "protected List<TaxDetail> taxes = new ArrayList<>();",
+        "protected BigDecimal totalTax;",
+        "protected BigDecimal totalItemAmount;",
+        "protected BigDecimal totalItemTaxableAmount;",
+        "protected BigDecimal proratedOrderAdjustment;",
+        "private String status;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/FulfillmentGroupItemImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "FulfillmentGroupItemImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/FulfillmentGroupItemImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final Log LOG = LogFactory.getLog(MergePersistenceUnitManager.class);",
+        "public static String currentProcessingPersistenceUnit;",
+        "protected static boolean transformed = false;",
+        "protected HashMap<String, PersistenceUnitInfo> mergedPus = new HashMap<>();",
+        "protected List<BroadleafClassTransformer> classTransformers = new ArrayList<>();",
+        "protected Set<String> mergedPersistenceXmlLocations;",
+        "protected Map<String, DataSource> mergedDataSources;",
+        "protected Set<BroadleafClassTransformer> mergedClassTransformers;",
+        "protected EntityMarkerClassTransformer entityMarkerClassTransformer;",
+        "protected MBeanExporter mBeanExporter;",
+        "protected ApplicationContext applicationContext;",
+        "protected Environment environment;",
+        "protected List<QueryConfiguration> queryConfigurations = new ArrayList<>();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/extensibility/jpa/MergePersistenceUnitManager.java",
+      "migration_source_type": "jpa-entity",
+      "name": "MergePersistenceUnitManager",
+      "relationships": [],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/extensibility/jpa/MergePersistenceUnitManager.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final Log LOG = LogFactory.getLog(OrderItemImpl.class);",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Auditable auditable = new Auditable();",
+        "protected Category category;",
+        "protected Order order;",
+        "protected BigDecimal price;",
+        "protected int quantity;",
+        "protected BigDecimal retailPrice;",
+        "protected BigDecimal salePrice;",
+        "protected String name;",
+        "protected PersonalMessage personalMessage;",
+        "protected GiftWrapOrderItem giftWrapOrderItem;",
+        "protected List<OrderItemAdjustment> orderItemAdjustments = new ArrayList<>();",
+        "protected List<ProratedOrderItemAdjustment> proratedOrderItemAdjustments = new A",
+        "protected List<OrderItemQualifier> orderItemQualifiers = new ArrayList<>();",
+        "protected List<CandidateItemOffer> candidateItemOffers = new ArrayList<>();",
+        "protected List<OrderItemPriceDetail> orderItemPriceDetails = new ArrayList<>();",
+        "protected String orderItemType;",
+        "protected Boolean itemTaxable;",
+        "protected Boolean retailPriceOverride;",
+        "protected Boolean salePriceOverride;",
+        "protected Boolean discountsAllowed;",
+        "protected Map<String, OrderItemAttribute> orderItemAttributeMap = new HashMap<St",
+        "protected BigDecimal totalTax;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderItemImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OrderItemImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderItemImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final Log LOG = LogFactory.getLog(PageTemplateImpl.class);",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String templateName;",
+        "protected String templateDescription;",
+        "protected String templatePath;",
+        "protected Locale locale;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/page/domain/PageTemplateImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "PageTemplateImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/page/domain/PageTemplateImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final Log LOG = LogFactory.getLog(SkuImpl.class);",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String externalId;",
+        "protected String urlKey;",
+        "protected String displayTemplate;",
+        "protected String upc;",
+        "protected BigDecimal salePrice;",
+        "protected BigDecimal retailPrice;",
+        "protected BigDecimal cost;",
+        "protected String name;",
+        "protected String description;",
+        "protected String longDescription;",
+        "protected String taxCode;",
+        "protected Character taxable;",
+        "protected Character discountable;",
+        "protected Character available;",
+        "protected Date activeStartDate;",
+        "protected Date activeEndDate;",
+        "protected Dimension dimension = new Dimension();",
+        "protected Weight weight = new Weight();",
+        "protected Boolean isMachineSortable;",
+        "protected Map<String, SkuMediaXref> skuMedia = new HashMap<>();",
+        "protected Map<String, Media> legacySkuMedia = new HashMap<>();",
+        "protected Product defaultProduct;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/SkuImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SkuImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@ManyToMany",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/SkuImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = -122818474469147685L;",
+        "protected Long id;",
+        "protected String entityType;",
+        "protected String entityId;",
+        "protected String fieldName;",
+        "protected String localeCode;",
+        "protected String translatedValue;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/i18n/domain/TranslationImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "TranslationImpl",
+      "relationships": [],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/i18n/domain/TranslationImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = -4036994446393527252L;",
+        "protected Long id;",
+        "protected String type;",
+        "protected BigDecimal amount;",
+        "protected BigDecimal rate;",
+        "protected String jurisdictionName;",
+        "protected String country;",
+        "protected String region;",
+        "protected String taxName;",
+        "protected BroadleafCurrency currency;",
+        "protected ModuleConfiguration moduleConfiguation;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/TaxDetailImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "TaxDetailImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/TaxDetailImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "private String id;",
+        "private Integer zipcode;",
+        "private String zipState;",
+        "private String zipCity;",
+        "private double zipLongitude;",
+        "private double zipLatitude;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/store/domain/ZipCodeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "ZipCodeImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/store/domain/ZipCodeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "private String key;",
+        "private static final long serialVersionUID = 1L;",
+        "private Long categoryId;",
+        "private Long mediaId;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/media/domain/CategoryMediaMap.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CategoryMediaMap",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/media/domain/CategoryMediaMap.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "private static Integer DEFAULT_MAX_URL_ENTRIES = 50000;",
+        "private static String DEFAULT_SITE_MAP_FILE_NAME = \"sitemap.xml\";",
+        "protected Integer maximumURLEntriesPerFile;",
+        "protected List<SiteMapGeneratorConfiguration> siteMapGeneratorConfigurations = n",
+        "protected String siteMapFileName;",
+        "protected String indexedSiteMapFileName;",
+        "protected String indexedSiteMapFilePattern;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/sitemap/domain/SiteMapConfigurationImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SiteMapConfigurationImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/sitemap/domain/SiteMapConfigurationImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "private static final Integer ZERO = 0;",
+        "protected Long id;",
+        "protected PageTemplate pageTemplate;",
+        "protected String description;",
+        "protected String fullUrl;",
+        "protected Map<String, PageField> pageFields = new HashMap<String, PageField>();",
+        "protected Integer priority;",
+        "protected Boolean offlineFlag = false;",
+        "protected Map<String, PageRule> pageMatchRules = new HashMap<String, PageRule>()",
+        "protected Set<PageItemCriteria> qualifyingItemCriteria = new HashSet<>();",
+        "protected Boolean excludeFromSiteMap = false;",
+        "protected Date activeStartDate;",
+        "protected Date activeEndDate;",
+        "protected String metaTitle;",
+        "protected String metaDescription;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/page/domain/PageImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "PageImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@ManyToMany",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/page/domain/PageImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "private static final Log LOG = LogFactory.getLog(CategoryImpl.class);",
+        "protected Long id;",
+        "protected String name;",
+        "protected String url;",
+        "protected Boolean overrideGeneratedUrl = false;",
+        "protected String externalId;",
+        "protected String urlKey;",
+        "protected String description;",
+        "protected String taxCode;",
+        "protected Date activeStartDate;",
+        "protected Date activeEndDate;",
+        "protected String displayTemplate;",
+        "protected String longDescription;",
+        "protected BigDecimal rootDisplayOrder;",
+        "protected String metaTitle;",
+        "protected String metaDescription;",
+        "protected String productTitlePatternOverride;",
+        "protected String productDescriptionPatternOverride;",
+        "protected Category defaultParentCategory;",
+        "protected List<CategoryXref> allChildCategoryXrefs = new ArrayList<>(10);",
+        "protected List<CategoryXref> allParentCategoryXrefs = new ArrayList<>(10);",
+        "protected List<CategoryProductXref> allProductXrefs = new ArrayList<>(10);",
+        "protected Map<String, CategoryMediaXref> categoryMedia = new HashMap<>();",
+        "protected Map<String, Media> legacyCategoryMedia = new HashMap<>();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/CategoryImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CategoryImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/CategoryImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "private static final Log LOG = LogFactory.getLog(SearchRedirectImpl.class);",
+        "protected Long id;",
+        "protected Integer searchPriority;",
+        "protected String searchTerm;",
+        "protected String url;",
+        "protected Date activeStartDate;",
+        "protected Date activeEndDate;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/redirect/domain/SearchRedirectImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SearchRedirectImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/redirect/domain/SearchRedirectImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "private static final Log LOG = LogFactory.getLog(SiteImpl.class);",
+        "protected Long id;",
+        "protected String name;",
+        "protected String siteIdentifierType;",
+        "protected String siteIdentifierValue;",
+        "protected Boolean deactivated = false;",
+        "protected List<Catalog> catalogs = new ArrayList<>();",
+        "protected Locale defaultLocale;",
+        "protected ArchiveStatus archiveStatus = new ArchiveStatus();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/site/domain/SiteImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SiteImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@ManyToMany",
+        "@JoinColumn"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/site/domain/SiteImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected BigDecimal baseRetailPrice;",
+        "protected BigDecimal baseSalePrice;",
+        "protected Sku sku;",
+        "protected Product product;",
+        "protected BundleOrderItem bundleOrderItem;",
+        "protected SkuBundleItem skuBundleItem;",
+        "protected Map<String, String> additionalAttributes = new HashMap<String, String>",
+        "protected List<DiscreteOrderItemFeePrice> discreteOrderItemFeePrices = new Array",
+        "protected Sku deproxiedSku;",
+        "protected Product deproxiedProduct;",
+        "public static final String OrderItems = \"OrderImpl_Order_Items_Tab\";",
+        "public static final int OrderItems = 2000;",
+        "public static final int PRODUCT = 2000;",
+        "public static final int SKU = 3000;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/DiscreteOrderItemImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "DiscreteOrderItemImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/DiscreteOrderItemImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Category category;",
+        "private Long id;",
+        "private String promotionMessage;",
+        "private BigDecimal sequence;",
+        "private Product product;",
+        "private Product relatedSaleProduct = new ProductImpl();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/UpSaleProductImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "UpSaleProductImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/UpSaleProductImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Category rootCategory;",
+        "protected int startingDepth = 1;",
+        "protected int endingDepth = 1;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/CategorySiteMapGeneratorConfigurationImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CategorySiteMapGeneratorConfigurationImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/CategorySiteMapGeneratorConfigurationImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Character locked = 'N';",
+        "protected Long lastUpdated;",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long orderId;",
+        "protected String key;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderLockImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OrderLockImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderLockImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Customer customer;",
+        "protected Date reivewSubmittedDate;",
+        "protected String reviewText;",
+        "protected String reviewStatus;",
+        "protected Integer helpfulCount;",
+        "protected Integer notHelpfulCount;",
+        "protected RatingSummary ratingSummary;",
+        "protected List<ReviewFeedback> reviewFeedback;",
+        "protected RatingDetail ratingDetail;",
+        "private Long id;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/rating/domain/ReviewDetailImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "ReviewDetailImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@OneToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/rating/domain/ReviewDetailImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected EncryptionModule encryptionModule;",
+        "protected Long id;",
+        "protected String referenceNumber;",
+        "protected String accountNumber;",
+        "protected String routingNumber;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/secure/BankAccountPaymentImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "BankAccountPaymentImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/secure/BankAccountPaymentImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected EncryptionModule encryptionModule;",
+        "protected Long id;",
+        "protected String referenceNumber;",
+        "protected String pan;",
+        "protected Integer expirationMonth;",
+        "protected Integer expirationYear;",
+        "protected String nameOnCard;",
+        "protected String cvvCode;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/secure/CreditCardPaymentInfoImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CreditCardPaymentInfoImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/secure/CreditCardPaymentInfoImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected EncryptionModule encryptionModule;",
+        "protected Long id;",
+        "protected String referenceNumber;",
+        "protected String pan;",
+        "protected String pin;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/secure/GiftCardPaymentImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "GiftCardPaymentImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/secure/GiftCardPaymentImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected List<DiscreteOrderItem> discreteOrderItems = new ArrayList<>();",
+        "protected List<BundleOrderItemFeePrice> bundleOrderItemFeePrices = new ArrayList",
+        "protected BigDecimal baseRetailPrice;",
+        "protected BigDecimal baseSalePrice;",
+        "protected Sku sku;",
+        "protected ProductBundle productBundle;",
+        "protected Sku deproxiedSku;",
+        "protected ProductBundle deproxiedProductBundle;",
+        "public static final String OrderItems = \"OrderImpl_Order_Items_Tab\";",
+        "public static final int OrderItems = 2000;",
+        "public static final int PRODUCT = 2000;",
+        "public static final int SKU = 3000;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/BundleOrderItemImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "BundleOrderItemImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/BundleOrderItemImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected List<FulfillmentPriceBand> bands = new ArrayList<FulfillmentPriceBand>"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/fulfillment/domain/BandedPriceFulfillmentOptionImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "BandedPriceFulfillmentOptionImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/fulfillment/domain/BandedPriceFulfillmentOptionImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected List<FulfillmentWeightBand> bands = new ArrayList<FulfillmentWeightBan"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/fulfillment/domain/BandedWeightFulfillmentOptionImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "BandedWeightFulfillmentOptionImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/fulfillment/domain/BandedWeightFulfillmentOptionImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected List<OrderItem> wrappedItems = new ArrayList<>();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/GiftWrapOrderItemImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "GiftWrapOrderItemImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/GiftWrapOrderItemImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected List<SiteMapUrlEntry> customURLEntries = new ArrayList<SiteMapUrlEntry"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/sitemap/domain/CustomUrlSiteMapGeneratorConfigurationImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CustomUrlSiteMapGeneratorConfigurationImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/sitemap/domain/CustomUrlSiteMapGeneratorConfigurationImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Auditable auditable = new Auditable();",
+        "protected PreviewStatus previewable = new PreviewStatus();",
+        "protected String name;",
+        "protected Customer customer;",
+        "protected String status;",
+        "protected BigDecimal totalTax;",
+        "protected BigDecimal totalFulfillmentCharges;",
+        "protected BigDecimal subTotal;",
+        "protected BigDecimal total;",
+        "protected Date submitDate;",
+        "protected String emailAddress;",
+        "protected List<OrderItem> orderItems = new ArrayList<>();",
+        "protected List<FulfillmentGroup> fulfillmentGroups = new ArrayList<>();",
+        "protected List<OrderAdjustment> orderAdjustments = new ArrayList<>();",
+        "protected List<OfferCode> addedOfferCodes = new ArrayList<>();",
+        "protected List<CandidateOrderOffer> candidateOrderOffers = new ArrayList<>();",
+        "protected List<OrderPayment> payments = new ArrayList<>();",
+        "protected Map<Offer, OfferInfo> additionalOfferInformation = new HashMap<>();",
+        "protected Map<String, OrderAttribute> orderAttributes = new HashMap<>();",
+        "protected BroadleafCurrency currency;",
+        "protected Locale locale;",
+        "protected Boolean taxOverride;",
+        "protected List<ActivityMessageDTO> orderMessages;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OrderImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@ManyToMany",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Auditable auditable = new Auditable();",
+        "protected PreviewStatus previewable = new PreviewStatus();",
+        "protected String username;",
+        "protected String password;",
+        "protected String emailAddress;",
+        "protected String firstName;",
+        "protected String lastName;",
+        "protected String externalId;",
+        "protected ChallengeQuestion challengeQuestion;",
+        "protected String challengeAnswer;",
+        "protected Boolean passwordChangeRequired = false;",
+        "protected Boolean receiveEmail = false;",
+        "protected Boolean registered = false;",
+        "protected Boolean deactivated = false;",
+        "protected Locale customerLocale;",
+        "protected Map<String, CustomerAttribute> customerAttributes = new HashMap<>();",
+        "protected List<CustomerAddress> customerAddresses = new ArrayList<>();",
+        "protected List<CustomerPhone> customerPhones = new ArrayList<>();",
+        "protected List<CustomerPayment> customerPayments = new ArrayList<>();",
+        "protected Boolean isTaxExempt = false;",
+        "protected String taxExemptionCode;",
+        "protected String unencodedPassword;",
+        "protected String unencodedChallengeAnswer;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CustomerImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CustomerImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CustomerImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected BigDecimal minimumWeight;",
+        "protected String weightUnitOfMeasure;",
+        "protected BandedWeightFulfillmentOption option;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/fulfillment/domain/FulfillmentWeightBandImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "FulfillmentWeightBandImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/fulfillment/domain/FulfillmentWeightBandImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected BigDecimal retailPriceMinimumAmount;",
+        "protected BandedPriceFulfillmentOption option;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/fulfillment/domain/FulfillmentPriceBandImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "FulfillmentPriceBandImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/fulfillment/domain/FulfillmentPriceBandImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected BigDecimal sequence;",
+        "protected String promotionMessage;",
+        "protected Category category = new CategoryImpl();",
+        "protected Product product = new ProductImpl();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/FeaturedProductImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "FeaturedProductImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/FeaturedProductImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Boolean disabled = false;",
+        "protected String changeFreq;",
+        "protected String priority;",
+        "protected String generatorType;",
+        "protected SiteMapConfiguration siteMapConfiguration;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/sitemap/domain/SiteMapGeneratorConfigurationImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SiteMapGeneratorConfigurationImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/sitemap/domain/SiteMapGeneratorConfigurationImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Category category = new CategoryImpl();",
+        "protected Category subCategory = new CategoryImpl();",
+        "protected BigDecimal displayOrder;",
+        "protected Boolean defaultReference;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/CategoryXrefImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CategoryXrefImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/CategoryXrefImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Category category = new CategoryImpl();",
+        "protected Product product = new ProductImpl();",
+        "protected BigDecimal displayOrder;",
+        "protected Boolean defaultReference;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/CategoryProductXrefImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CategoryProductXrefImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/CategoryProductXrefImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Category category;",
+        "protected Media media;",
+        "protected String key;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/CategoryMediaXrefImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CategoryMediaXrefImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/CategoryMediaXrefImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Category category;",
+        "protected SearchFacet searchFacet;",
+        "protected BigDecimal sequence;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/CategoryExcludedSearchFacetImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CategoryExcludedSearchFacetImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/CategoryExcludedSearchFacetImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Category category;",
+        "protected SearchFacet searchFacet;",
+        "protected BigDecimal sequence;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/CategorySearchFacetImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CategorySearchFacetImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/CategorySearchFacetImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Customer customer;",
+        "protected Address billingAddress;",
+        "protected String paymentToken;",
+        "protected String paymentType;",
+        "protected String paymentGatewayType;",
+        "protected boolean isDefault = false;",
+        "protected Map<String, String> additionalFields = new HashMap<String, String>();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CustomerPaymentImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CustomerPaymentImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CustomerPaymentImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Customer customer;",
+        "protected Boolean isHelpful = false;",
+        "protected ReviewDetail reviewDetail;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/rating/domain/ReviewFeedbackImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "ReviewFeedbackImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/rating/domain/ReviewFeedbackImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Customer customer;",
+        "protected Offer offer;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/CustomerOfferImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CustomerOfferImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/CustomerOfferImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Customer customer;",
+        "protected Role role;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CustomerRoleImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CustomerRoleImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CustomerRoleImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected DataDrivenEnumeration type;",
+        "protected String key;",
+        "protected String display;",
+        "protected Boolean hidden = false;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/enumeration/domain/DataDrivenEnumerationValueImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "DataDrivenEnumerationValueImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/enumeration/domain/DataDrivenEnumerationValueImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Date dateOpened;",
+        "protected String userAgent;",
+        "protected EmailTracking emailTracking;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/email/domain/EmailTrackingOpensImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "EmailTrackingOpensImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/email/domain/EmailTrackingOpensImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected EmailTracking emailTracking;",
+        "protected Date dateClicked;",
+        "protected String customerId;",
+        "protected String destinationUri;",
+        "protected String queryString;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/email/domain/EmailTrackingClicksImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "EmailTrackingClicksImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/email/domain/EmailTrackingClicksImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected FulfillmentGroup fulfillmentGroup;",
+        "protected BigDecimal amount;",
+        "protected String name;",
+        "protected String reportingCode;",
+        "protected Boolean feeTaxable = false;",
+        "protected List<TaxDetail> taxes = new ArrayList<TaxDetail>();",
+        "protected BigDecimal totalTax;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/FulfillmentGroupFeeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "FulfillmentGroupFeeImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/FulfillmentGroupFeeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected FulfillmentGroup fulfillmentGroup;",
+        "protected Offer offer;",
+        "protected BigDecimal discountedPrice;",
+        "protected Offer deproxiedOffer;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/CandidateFulfillmentGroupOfferImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CandidateFulfillmentGroupOfferImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/CandidateFulfillmentGroupOfferImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected FulfillmentGroup fulfillmentGroup;",
+        "protected Offer offer;",
+        "protected String reason;",
+        "protected BigDecimal value = Money.ZERO.getAmount();",
+        "protected Boolean isFutureCredit = false;",
+        "protected Offer deproxiedOffer;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/FulfillmentGroupAdjustmentImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "FulfillmentGroupAdjustmentImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/FulfillmentGroupAdjustmentImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Integer groupOrder;",
+        "protected StructuredContentFieldTemplate template;",
+        "protected FieldGroup fieldGroup;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentFieldGroupXrefImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "StructuredContentFieldGroupXrefImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentFieldGroupXrefImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Integer quantity;",
+        "protected BigDecimal itemSalePrice;",
+        "protected ProductBundle bundle;",
+        "protected Sku sku;",
+        "protected BigDecimal sequence;",
+        "protected DynamicSkuPrices dynamicPrices = null;",
+        "protected Sku deproxiedSku = null;",
+        "protected ProductBundle deproxiedBundle = null;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/SkuBundleItemImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SkuBundleItemImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/SkuBundleItemImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Integer quantity;",
+        "protected String orderItemMatchRule;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferItemCriteriaImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OfferItemCriteriaImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferItemCriteriaImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Long skuId;",
+        "protected Long locationId;",
+        "protected Integer quantityOnHand;",
+        "protected Integer reserveQuantity;",
+        "protected String availabilityStatus;",
+        "protected Date availabilityDate;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/inventory/domain/SkuAvailabilityImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SkuAvailabilityImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/inventory/domain/SkuAvailabilityImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Long staticAssetId;",
+        "protected Blob fileData;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/file/domain/StaticAssetStorageImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "StaticAssetStorageImpl",
+      "relationships": [],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/file/domain/StaticAssetStorageImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Map<String, String> fieldValues = new HashMap<>();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferInfoImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OfferInfoImpl",
+      "relationships": [
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferInfoImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Offer offer;",
+        "protected Date activeStartDate;",
+        "protected Date activeEndDate;",
+        "protected String identifierType;",
+        "protected String identifierValue;",
+        "protected String discountType;",
+        "protected BigDecimal amount;",
+        "protected Integer quantity;",
+        "protected ArchiveStatus archiveStatus = new ArchiveStatus();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferPriceDataImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OfferPriceDataImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferPriceDataImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Offer offer;",
+        "protected OfferItemCriteria offerItemCriteria;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferQualifyingCriteriaXrefImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OfferQualifyingCriteriaXrefImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferQualifyingCriteriaXrefImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Offer offer;",
+        "protected OfferItemCriteria offerItemCriteria;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferTargetCriteriaXrefImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OfferTargetCriteriaXrefImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferTargetCriteriaXrefImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Offer offer;",
+        "protected OfferRule offerRule;",
+        "protected String key;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferOfferRuleXrefImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OfferOfferRuleXrefImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferOfferRuleXrefImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Offer offer;",
+        "protected String offerCode;",
+        "protected Date offerCodeStartDate;",
+        "protected Date offerCodeEndDate;",
+        "protected Integer maxUses;",
+        "protected int uses;",
+        "protected String emailAddress;",
+        "protected ArchiveStatus archiveStatus = new ArchiveStatus();",
+        "protected List<Order> orders = new ArrayList<>();",
+        "protected Offer sbClonedOffer;",
+        "protected Offer deproxiedOffer;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferCodeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OfferCodeImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@ManyToMany",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferCodeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Order order;",
+        "protected Address billingAddress;",
+        "protected BigDecimal amount;",
+        "protected String referenceNumber;",
+        "protected String type;",
+        "protected String gatewayType;",
+        "protected List<PaymentTransaction> transactions = new ArrayList<PaymentTransacti",
+        "protected ArchiveStatus archiveStatus = new ArchiveStatus();",
+        "public static final String Address = \"PaymentInfoImpl_Address_Tab\";",
+        "public static final String Log = \"PaymentInfoImpl_Log_Tab\";",
+        "public static final String Advanced = \"PaymentInfoImpl_Advanced_Tab\";",
+        "public static final int Address = 2000;",
+        "public static final int Log = 4000;",
+        "public static final int Advanced = 5000;",
+        "public static final String Items = \"PaymentInfoImpl_Items\";",
+        "public static final int Items = 1000;",
+        "public static final int REFNUMBER = 3000;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/OrderPaymentImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OrderPaymentImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/OrderPaymentImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Order order;",
+        "protected Offer offer;",
+        "protected BigDecimal discountedPrice;",
+        "protected Offer deproxiedOffer;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/CandidateOrderOfferImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CandidateOrderOfferImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/CandidateOrderOfferImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Order order;",
+        "protected Offer offer;",
+        "protected String reason;",
+        "protected BigDecimal value = Money.ZERO.getAmount();",
+        "protected Boolean isFutureCredit = false;",
+        "protected Offer deproxiedOffer;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OrderAdjustmentImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OrderAdjustmentImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OrderAdjustmentImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Order order;",
+        "protected OrderItem orderItem;",
+        "protected Address address;",
+        "protected FulfillmentOption fulfillmentOption;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderMultishipOptionImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OrderMultishipOptionImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderMultishipOptionImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected OrderItem orderItem;",
+        "protected Offer offer;",
+        "protected String reason;",
+        "protected BigDecimal value = Money.ZERO.getAmount();",
+        "protected boolean appliedToSalePrice;",
+        "protected Money retailValue;",
+        "protected Money salesValue;",
+        "protected Offer deproxiedOffer;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OrderItemAdjustmentImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OrderItemAdjustmentImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OrderItemAdjustmentImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected OrderItem orderItem;",
+        "protected Offer offer;",
+        "protected String reason;",
+        "protected BigDecimal value = Money.ZERO.getAmount();",
+        "protected int quantity;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/ProratedOrderItemAdjustmentImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "ProratedOrderItemAdjustmentImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/ProratedOrderItemAdjustmentImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected OrderItemPriceDetail orderItemPriceDetail;",
+        "protected Offer offer;",
+        "protected String offerName;",
+        "protected String reason;",
+        "protected BigDecimal value = Money.ZERO.getAmount();",
+        "protected boolean appliedToSalePrice;",
+        "protected Boolean isFutureCredit = false;",
+        "protected Money retailValue;",
+        "protected Money salesValue;",
+        "protected Offer deproxiedOffer;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OrderItemPriceDetailAdjustmentImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OrderItemPriceDetailAdjustmentImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OrderItemPriceDetailAdjustmentImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected PageTemplate pageTemplate;",
+        "protected FieldGroup fieldGroup;",
+        "protected BigDecimal groupOrder;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/page/domain/PageTemplateFieldGroupXrefImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "PageTemplateFieldGroupXrefImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/page/domain/PageTemplateFieldGroupXrefImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Product product = new ProductImpl();",
+        "protected ProductOption productOption = new ProductOptionImpl();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/ProductOptionXrefImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "ProductOptionXrefImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/ProductOptionXrefImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected SandBox sandBox;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/sandbox/domain/SandBoxManagementImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SandBoxManagementImpl",
+      "relationships": [
+        "@OneToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/sandbox/domain/SandBoxManagementImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected SearchFacet searchFacet = new SearchFacetImpl();",
+        "protected BigDecimal minValue;",
+        "protected BigDecimal maxValue;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/SearchFacetRangeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SearchFacetRangeImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/SearchFacetRangeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected SearchFacet searchFacet;",
+        "protected SearchFacet requiredFacet;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/RequiredFacetImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "RequiredFacetImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/RequiredFacetImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Site site = new SiteImpl();",
+        "protected Catalog catalog = new CatalogImpl();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/site/domain/SiteCatalogXrefImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SiteCatalogXrefImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/site/domain/SiteCatalogXrefImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Sku sku;",
+        "protected Media media;",
+        "protected String key;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/SkuMediaXrefImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SkuMediaXrefImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/SkuMediaXrefImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Sku sku;",
+        "protected ProductOptionValue productOptionValue;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/SkuProductOptionValueXrefImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SkuProductOptionValueXrefImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/SkuProductOptionValueXrefImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String addressName;",
+        "protected Customer customer;",
+        "protected Address address;",
+        "protected ArchiveStatus archiveStatus = new ArchiveStatus();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CustomerAddressImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CustomerAddressImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CustomerAddressImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String attributeValue;",
+        "protected Long displayOrder;",
+        "protected BigDecimal priceAdjustment;",
+        "protected ProductOption productOption;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/ProductOptionValueImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "ProductOptionValueImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/ProductOptionValueImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String codeType;",
+        "protected String key;",
+        "protected String description;",
+        "protected Character modifiable;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/util/domain/CodeTypeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CodeTypeImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/util/domain/CodeTypeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String countryCode;",
+        "protected String phoneNumber;",
+        "protected String extension;",
+        "protected boolean isDefault = false;",
+        "protected boolean isActive = true;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/PhoneImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "PhoneImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/PhoneImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String description;",
+        "protected String longDescription;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/file/domain/StaticAssetDescriptionImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "StaticAssetDescriptionImpl",
+      "relationships": [],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/file/domain/StaticAssetDescriptionImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String emailAddress;",
+        "protected Date dateSent;",
+        "protected String type;",
+        "protected Set<EmailTrackingClicks> emailTrackingClicks = new HashSet<>();",
+        "protected Set<EmailTrackingOpens> emailTrackingOpens = new HashSet<>();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/email/domain/EmailTrackingImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "EmailTrackingImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/email/domain/EmailTrackingImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String fieldKey;",
+        "protected String stringValue;",
+        "protected String lobValue;",
+        "protected Page page;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/page/domain/PageFieldImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "PageFieldImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/page/domain/PageFieldImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String fieldKey;",
+        "protected String stringValue;",
+        "protected String lobValue;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentFieldImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "StructuredContentFieldImpl",
+      "relationships": [],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentFieldImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String fieldType;",
+        "protected IndexField indexField;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/IndexFieldTypeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "IndexFieldTypeImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/IndexFieldTypeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String fullName;",
+        "protected String firstName;",
+        "protected String lastName;",
+        "protected String emailAddress;",
+        "protected String companyName;",
+        "protected String addressLine1;",
+        "protected String addressLine2;",
+        "protected String addressLine3;",
+        "protected String city;",
+        "protected String isoCountrySubdivision;",
+        "protected String stateProvinceRegion;",
+        "protected String county;",
+        "protected ISOCountry isoCountryAlpha2;",
+        "protected String postalCode;",
+        "protected String zipFour;",
+        "protected Phone phonePrimary;",
+        "protected Phone phoneSecondary;",
+        "protected Phone phoneFax;",
+        "protected boolean isDefault = false;",
+        "protected boolean isActive = true;",
+        "protected boolean isBusiness = false;",
+        "protected boolean isStreet = false;",
+        "protected boolean isMailing = false;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/AddressImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "AddressImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/AddressImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String incomingURL;",
+        "protected String newURL;",
+        "protected String urlRedirectType;",
+        "protected Boolean isRegex = false;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/url/domain/URLHandlerImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "URLHandlerImpl",
+      "relationships": [],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/url/domain/URLHandlerImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String itemId;",
+        "protected String ratingTypeStr;",
+        "protected Double averageRating = 0.0;",
+        "protected List<RatingDetail> ratings = new ArrayList<>();",
+        "protected List<ReviewDetail> reviews = new ArrayList<>();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/rating/domain/RatingSummaryImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "RatingSummaryImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/rating/domain/RatingSummaryImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String key;",
+        "protected Boolean modifiable = false;",
+        "protected List<DataDrivenEnumerationValue> enumValues = new ArrayList<>();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/enumeration/domain/DataDrivenEnumerationImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "DataDrivenEnumerationImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/enumeration/domain/DataDrivenEnumerationImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String location;",
+        "protected Date lastModified = new Date();",
+        "protected String changeFreq;",
+        "protected String priority;",
+        "protected CustomUrlSiteMapGeneratorConfiguration customUrlSiteMapGeneratorConfig"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/sitemap/domain/SiteMapUrlEntryImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SiteMapUrlEntryImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/sitemap/domain/SiteMapUrlEntryImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String matchRule;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/page/domain/PageRuleImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "PageRuleImpl",
+      "relationships": [],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/page/domain/PageRuleImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String matchRule;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentRuleImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "StructuredContentRuleImpl",
+      "relationships": [],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentRuleImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String matchRule;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferRuleImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OfferRuleImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferRuleImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String messageTo;",
+        "protected String messageFrom;",
+        "protected String message;",
+        "protected String occasion;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/PersonalMessageImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "PersonalMessageImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/PersonalMessageImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String moduleName;",
+        "protected Date activeStartDate;",
+        "protected Date activeEndDate;",
+        "protected Boolean isDefault = false;",
+        "protected String configType;",
+        "protected Integer priority = 100;",
+        "protected Auditable auditable = new Auditable();",
+        "protected ArchiveStatus archiveStatus = new ArchiveStatus();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/config/domain/AbstractModuleConfiguration.java",
+      "migration_source_type": "jpa-entity",
+      "name": "AbstractModuleConfiguration",
+      "relationships": [],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/config/domain/AbstractModuleConfiguration.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected Boolean initCollapsedFlag = false;",
+        "protected List<FieldDefinition> fieldDefinitions = new ArrayList<FieldDefinition",
+        "protected Boolean isMasterFieldGroup = false;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/field/domain/FieldGroupImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "FieldGroupImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/field/domain/FieldGroupImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected Boolean overrideGeneratedPropertyName = false;",
+        "protected String value;",
+        "protected String propertyType;",
+        "protected String friendlyName;",
+        "protected String friendlyGroup;",
+        "protected String friendlyTab;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/config/domain/SystemPropertyImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SystemPropertyImpl",
+      "relationships": [],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/config/domain/SystemPropertyImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected Long author;",
+        "protected String sandboxType = SandBoxType.APPROVAL.getType();",
+        "protected SandBox parentSandBox;",
+        "protected List<SandBox> childSandBoxes;",
+        "protected String color;",
+        "protected String description;",
+        "protected Date goLiveDate;",
+        "protected ArchiveStatus archiveStatus = new ArchiveStatus();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/sandbox/domain/SandBoxImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SandBoxImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/sandbox/domain/SandBoxImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String description;",
+        "protected BigDecimal amount;",
+        "protected Boolean taxable = Boolean.FALSE;",
+        "protected String expression;",
+        "protected String feeType = SkuFeeType.FULFILLMENT.getType();",
+        "protected List<Sku> skus;",
+        "protected BroadleafCurrency currency;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/SkuFeeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SkuFeeImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@ManyToMany",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/SkuFeeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String description;",
+        "protected StructuredContentFieldTemplate structuredContentFieldTemplate;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentTypeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "StructuredContentTypeImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentTypeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String friendlyName;",
+        "protected String fieldType;",
+        "protected String securityLevel;",
+        "protected Boolean hiddenFlag = false;",
+        "protected String validationRegEx;",
+        "protected String validationErrorMesageKey;",
+        "protected Integer maxLength;",
+        "protected String columnWidth;",
+        "protected Boolean textAreaFlag = false;",
+        "protected Boolean requiredFlag = false;",
+        "protected DataDrivenEnumeration dataDrivenEnumeration;",
+        "protected Boolean allowMultiples = false;",
+        "protected FieldGroup fieldGroup;",
+        "protected Integer fieldOrder = 0;",
+        "protected String tooltip;",
+        "protected String helpText;",
+        "protected String hint;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/field/domain/FieldDefinitionImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "FieldDefinitionImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/field/domain/FieldDefinitionImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String label;",
+        "protected IndexFieldType fieldType;",
+        "protected Boolean showOnSearch = false;",
+        "protected Boolean useFacetRanges = false;",
+        "protected Integer searchDisplayPriority = 1;",
+        "protected Boolean canMultiselect = true;",
+        "protected List<SearchFacetRange> searchFacetRanges = new ArrayList<SearchFacetRa",
+        "protected List<RequiredFacet> requiredFacets = new ArrayList<RequiredFacet>();",
+        "protected Boolean requiresAllDependentFacets = false;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/SearchFacetImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SearchFacetImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/SearchFacetImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String longDescription;",
+        "protected Boolean useFlatRates = true;",
+        "protected String fulfillmentType;",
+        "protected String taxCode;",
+        "protected Boolean taxable = false;",
+        "public static final int NAME = 1000;",
+        "public static final int DESCRIPTION = 2000;",
+        "public static final int FLATRATES = 9000;",
+        "public static final int FULFILLMENT_TYPE = 10000;",
+        "public static final int TAX_CODE = 1100;",
+        "public static final int TAXABLE = 12000;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/FulfillmentOptionImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "FulfillmentOptionImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/FulfillmentOptionImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String message;",
+        "protected Media media;",
+        "protected Integer priority;",
+        "protected Date startDate;",
+        "protected Date endDate;",
+        "protected String messagePlacement;",
+        "protected Locale locale;",
+        "protected ArchiveStatus archiveStatus = new ArchiveStatus();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/promotionMessage/domain/PromotionMessageImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "PromotionMessageImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/promotionMessage/domain/PromotionMessageImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String moduleKey;",
+        "protected String icon;",
+        "protected List<AdminSection> sections = new ArrayList<AdminSection>();",
+        "protected Integer displayOrder;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/AdminModuleImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "AdminModuleImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/AdminModuleImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String sectionKey;",
+        "protected String url;",
+        "protected AdminModule module;",
+        "protected List<AdminPermission> permissions = new ArrayList<AdminPermission>();",
+        "protected String displayController;",
+        "protected Boolean useDefaultHandler = Boolean.TRUE;",
+        "protected String ceilingEntity;",
+        "protected Integer displayOrder;",
+        "protected Boolean folderable;",
+        "protected Boolean folderedByDefault;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/AdminSectionImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "AdminSectionImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@ManyToMany",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/AdminSectionImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String storeNumber;",
+        "protected Boolean open;",
+        "protected String storeHours;",
+        "protected Address address;",
+        "protected Double latitude;",
+        "protected Double longitude;",
+        "protected ArchiveStatus archiveStatus = new ArchiveStatus();",
+        "public static final String Advanced = \"StoreImpl_Advanced_Tab\";",
+        "public static final int Advanced = 7000;",
+        "public static final String General = \"General\";",
+        "public static final String Location = \"StoreImpl_Store_Location\";",
+        "public static final String Geocoding = \"StoreImpl_Store_Geocoding\";",
+        "public static final int General = 1000;",
+        "public static final int Location = 2000;",
+        "public static final int Geocoding = 3000;",
+        "public static final int NAME = 1000;",
+        "public static final int LATITUDE = 9000;",
+        "public static final int LONGITUDE = 10000;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/store/domain/StoreImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "StoreImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/store/domain/StoreImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String type;",
+        "protected String attributeName;",
+        "protected String label;",
+        "protected Boolean required;",
+        "protected Integer displayOrder;",
+        "protected String validationString;",
+        "protected String errorCode;",
+        "protected String errorMessage;",
+        "protected List<ProductOptionValue> allowedValues = new ArrayList<>();",
+        "protected String longDescription;",
+        "protected List<ProductOptionXref> products = new ArrayList<>();",
+        "private Boolean useInSkuGeneration = Boolean.FALSE;",
+        "private String productOptionValidationStrategyType;",
+        "private String productOptionValidationType;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/ProductOptionImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "ProductOptionImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/ProductOptionImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String value;",
+        "protected AdminUser adminUser;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/AdminUserAttributeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "AdminUserAttributeImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/AdminUserAttributeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String value;",
+        "protected Category category;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/CategoryAttributeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CategoryAttributeImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/CategoryAttributeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String value;",
+        "protected Customer customer;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CustomerAttributeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CustomerAttributeImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CustomerAttributeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String value;",
+        "protected Order order;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderAttributeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OrderAttributeImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderAttributeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String value;",
+        "protected Page page;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/page/domain/PageAttributeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "PageAttributeImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/page/domain/PageAttributeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String value;",
+        "protected Product product;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/ProductAttributeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "ProductAttributeImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/ProductAttributeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String value;",
+        "protected Sku sku;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/SkuAttributeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "SkuAttributeImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/SkuAttributeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentFieldTemplateImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "StructuredContentFieldTemplateImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentFieldTemplateImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CountrySubdivisionCategoryImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CountrySubdivisionCategoryImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CountrySubdivisionCategoryImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String phoneName;",
+        "protected Customer customer;",
+        "protected Phone phone;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CustomerPhoneImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CustomerPhoneImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CustomerPhoneImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String promotionMessage;",
+        "protected BigDecimal sequence;",
+        "protected Product product;",
+        "protected Category category;",
+        "protected Product relatedSaleProduct = new ProductImpl();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/CrossSaleProductImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CrossSaleProductImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/CrossSaleProductImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String question;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/ChallengeQuestionImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "ChallengeQuestionImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/ChallengeQuestionImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String referenceNumber;",
+        "protected String method;",
+        "protected String service;",
+        "protected BigDecimal retailFulfillmentPrice;",
+        "protected BigDecimal saleFulfillmentPrice;",
+        "protected BigDecimal fulfillmentPrice;",
+        "protected String type;",
+        "protected BigDecimal totalTax;",
+        "protected BigDecimal totalItemTax;",
+        "protected BigDecimal totalFeeTax;",
+        "protected BigDecimal totalFulfillmentGroupTax;",
+        "protected String deliveryInstruction;",
+        "protected boolean primary = false;",
+        "protected BigDecimal merchandiseTotal;",
+        "protected BigDecimal total;",
+        "protected String status;",
+        "protected Boolean isShippingPriceTaxable = Boolean.FALSE;",
+        "protected FulfillmentOption fulfillmentOption;",
+        "protected Order order;",
+        "protected Integer sequence;",
+        "protected Address address;",
+        "protected Phone phone;",
+        "protected PersonalMessage personalMessage;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/FulfillmentGroupImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "FulfillmentGroupImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/FulfillmentGroupImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String roleName;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/RoleImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "RoleImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/RoleImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String type;",
+        "protected BigDecimal amount;",
+        "protected Date date;",
+        "protected String customerIpAddress;",
+        "protected String rawResponse;",
+        "protected Boolean success = true;",
+        "protected ArchiveStatus archiveStatus = new ArchiveStatus();",
+        "protected OrderPayment orderPayment;",
+        "protected PaymentTransaction parentTransaction;",
+        "protected Map<String, String> additionalFields = new HashMap<String, String>();",
+        "protected Boolean saveToken = false;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/PaymentTransactionImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "PaymentTransactionImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/payment/domain/PaymentTransactionImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String url;",
+        "protected String title;",
+        "protected String altText;",
+        "protected String tags;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/media/domain/MediaImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "MediaImpl",
+      "relationships": [],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/media/domain/MediaImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected StructuredContent structuredContent;",
+        "protected StructuredContentField structuredContentField;",
+        "protected String key;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentFieldXrefImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "StructuredContentFieldXrefImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentFieldXrefImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected String abbreviation;",
+        "protected String name;",
+        "protected String alternateAbbreviation;",
+        "protected Country country;",
+        "protected CountrySubdivisionCategory category;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CountrySubdivisionImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CountrySubdivisionImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CountrySubdivisionImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected String abbreviation;",
+        "protected String name;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CountryImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CountryImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CountryImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected String alpha2;",
+        "protected String name;",
+        "protected String alpha3;",
+        "protected Integer numericCode;",
+        "protected String status;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/i18n/domain/ISOCountryImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "ISOCountryImpl",
+      "relationships": [],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/i18n/domain/ISOCountryImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected String currencyCode;",
+        "protected String friendlyName;",
+        "protected Boolean defaultFlag = false;",
+        "protected java.util.Currency javaCurrency;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/currency/domain/BroadleafCurrencyImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "BroadleafCurrencyImpl",
+      "relationships": [],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/currency/domain/BroadleafCurrencyImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected String localeCode;",
+        "protected String friendlyName;",
+        "protected Boolean defaultFlag = false;",
+        "protected BroadleafCurrency defaultCurrency;",
+        "protected Boolean useInSearchIndex = false;",
+        "protected java.util.Locale javaLocale;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/locale/domain/LocaleImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "LocaleImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/locale/domain/LocaleImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected String pricingModel;",
+        "protected Boolean autoBundle = false;",
+        "protected Boolean itemsPromotable = false;",
+        "protected Boolean bundlePromotable = false;",
+        "protected Integer priority = 99;",
+        "protected List<SkuBundleItem> skuBundleItems = new ArrayList<>();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/ProductBundleImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "ProductBundleImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/ProductBundleImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected String token;",
+        "protected Date createDate;",
+        "protected Date tokenUsedDate;",
+        "protected Long adminUserId;",
+        "protected boolean tokenUsedFlag;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/ForgotPasswordSecurityTokenImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "ForgotPasswordSecurityTokenImpl",
+      "relationships": [],
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/ForgotPasswordSecurityTokenImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected String token;",
+        "protected Date createDate;",
+        "protected Date tokenUsedDate;",
+        "protected Long customerId;",
+        "protected boolean tokenUsedFlag;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CustomerForgotPasswordSecurityTokenImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CustomerForgotPasswordSecurityTokenImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-profile/src/main/java/org/broadleafcommerce/profile/core/domain/CustomerForgotPasswordSecurityTokenImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;",
+        "protected String type;",
+        "protected Long begin;",
+        "protected Long end;",
+        "protected Long batchStart;",
+        "protected Long batchSize;",
+        "protected Integer version;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/id/domain/IdGenerationImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "IdGenerationImpl",
+      "relationships": [],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/id/domain/IdGenerationImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 1L;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/DynamicPriceDiscreteOrderItemImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "DynamicPriceDiscreteOrderItemImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/DynamicPriceDiscreteOrderItemImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 2915813511754425605L;",
+        "protected Long id;",
+        "protected Boolean searchable;",
+        "protected Field field;",
+        "protected List<IndexFieldType> fieldTypes = new ArrayList<>();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/IndexFieldImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "IndexFieldImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/IndexFieldImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 2915813511754425605L;",
+        "protected Long id;",
+        "protected String entityType;",
+        "protected String friendlyName;",
+        "protected String propertyName;",
+        "protected Boolean overrideGeneratedPropertyName = false;",
+        "protected String abbreviation;",
+        "protected Boolean translatable = false;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/FieldImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "FieldImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/search/domain/FieldImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 2L;",
+        "protected BigDecimal price;",
+        "protected BroadleafCurrency currency;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/fulfillment/domain/FixedPriceFulfillmentOptionImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "FixedPriceFulfillmentOptionImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/fulfillment/domain/FixedPriceFulfillmentOptionImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "private static final long serialVersionUID = 6990685254640110350L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String fullUrl;",
+        "protected String title;",
+        "protected String altText;",
+        "protected String mimeType;",
+        "protected Long fileSize;",
+        "protected String fileExtension;",
+        "protected Map<String, StaticAssetDescription> contentMessageValues = new HashMap",
+        "protected String storageType;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/file/domain/StaticAssetImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "StaticAssetImpl",
+      "relationships": [
+        "@ManyToMany",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/file/domain/StaticAssetImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "protected AdminAuditable auditable = new AdminAuditable();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/weave/WeaveAdminAuditable.java",
+      "migration_source_type": "jpa-entity",
+      "name": "WeaveAdminAuditable",
+      "relationships": [],
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/weave/WeaveAdminAuditable.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "protected Double rating;",
+        "protected Date ratingSubmittedDate;",
+        "protected Customer customer;",
+        "protected RatingSummary ratingSummary;",
+        "private Long id;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/rating/domain/RatingDetailImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "RatingDetailImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/rating/domain/RatingDetailImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "protected Integer width;",
+        "protected Integer height;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/file/domain/ImageStaticAssetImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "ImageStaticAssetImpl",
+      "relationships": [],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/file/domain/ImageStaticAssetImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "protected static final Log LOG = LogFactory.getLog(EntityMarkerClassTransformer.class);",
+        "protected HashSet<String> transformedEntityClassNames = new HashSet<>();",
+        "protected HashSet<String> transformedNonEntityClassNames = new HashSet<>();",
+        "protected List<DirectCopyIgnorePattern> ignorePatterns = new ArrayList<>();"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/common/src/main/java/org/broadleafcommerce/common/extensibility/jpa/convert/EntityMarkerClassTransformer.java",
+      "migration_source_type": "jpa-entity",
+      "name": "EntityMarkerClassTransformer",
+      "relationships": [],
+      "source_file": "common/src/main/java/org/broadleafcommerce/common/extensibility/jpa/convert/EntityMarkerClassTransformer.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "protected static final Log LOG = LogFactory.getLog(OfferAuditImpl.class);",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Long offerId;",
+        "protected Long customerId;",
+        "protected Long accountId;",
+        "protected Long orderId;",
+        "protected Long offerCodeId;",
+        "protected Date redeemedDate;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferAuditImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OfferAuditImpl",
+      "relationships": [],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferAuditImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "protected static final Log LOG = LogFactory.getLog(OrderItemPriceDetailImpl.clas",
+        "private static final long serialVersionUID = 1L;",
+        "private static RoundingMode _roundingMode;",
+        "protected Long id;",
+        "protected OrderItem orderItem;",
+        "protected List<OrderItemPriceDetailAdjustment> orderItemPriceDetailAdjustments =",
+        "protected int quantity;",
+        "protected Boolean useSalePrice = true;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderItemPriceDetailImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OrderItemPriceDetailImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderItemPriceDetailImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "protected static final String LAST_USED_SANDBOX = \"LAST_USED_SANDBOX\";",
+        "private static final Log LOG = LogFactory.getLog(AdminUserImpl.class);",
+        "private static final long serialVersionUID = 1L;",
+        "protected String name;",
+        "protected String login;",
+        "protected String password;",
+        "protected String email;",
+        "protected String phoneNumber;",
+        "protected Boolean activeStatusFlag;",
+        "protected Set<AdminRole> allRoles = new HashSet<>();",
+        "protected Set<AdminPermission> allPermissions = new HashSet<>();",
+        "protected String unencodedPassword;",
+        "protected SandBox overrideSandBox;",
+        "protected Map<String, AdminUserAttribute> additionalFields = new HashMap<>();",
+        "private Long id;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/AdminUserImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "AdminUserImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@ManyToMany",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-open-admin-platform/src/main/java/org/broadleafcommerce/openadmin/server/security/domain/AdminUserImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "public static final Log LOG = LogFactory.getLog(BundleOrderItemFeePriceImpl.clas",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected BundleOrderItem bundleOrderItem;",
+        "protected BigDecimal amount;",
+        "private String name;",
+        "private String reportingCode;",
+        "private Boolean isTaxable = Boolean.FALSE;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/BundleOrderItemFeePriceImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "BundleOrderItemFeePriceImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/BundleOrderItemFeePriceImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "public static final Log LOG = LogFactory.getLog(CandidateItemOfferImpl.class);",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected OrderItem orderItem;",
+        "protected Offer offer;",
+        "protected Offer deproxiedOffer;",
+        "private BigDecimal discountedPrice;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/CandidateItemOfferImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "CandidateItemOfferImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/CandidateItemOfferImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "public static final Log LOG = LogFactory.getLog(DiscreteOrderItemFeePriceImpl.cl",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected DiscreteOrderItem discreteOrderItem;",
+        "protected BigDecimal amount;",
+        "private String name;",
+        "private String reportingCode;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/DiscreteOrderItemFeePriceImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "DiscreteOrderItemFeePriceImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/DiscreteOrderItemFeePriceImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "public static final Log LOG = LogFactory.getLog(OrderItemAttributeImpl.class);",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String name;",
+        "protected String value;",
+        "protected OrderItem orderItem;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderItemAttributeImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OrderItemAttributeImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderItemAttributeImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "public static final Log LOG = LogFactory.getLog(OrderItemQualifierImpl.class);",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected OrderItem orderItem;",
+        "protected Offer offer;",
+        "protected Long quantity;",
+        "protected Offer deproxiedOffer;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderItemQualifierImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OrderItemQualifierImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/order/domain/OrderItemQualifierImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "public static final String EXCLUDE_OFFERCODE_COPY_HINT = \"exclude-offer-offerCod",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected List<OfferCode> offerCodes = new ArrayList<>(100);",
+        "protected String name;",
+        "protected String description;",
+        "protected String marketingMessage;",
+        "protected String type;",
+        "protected String discountType;",
+        "protected BigDecimal value;",
+        "protected Integer priority;",
+        "protected Date startDate;",
+        "protected Date endDate;",
+        "protected String targetSystem;",
+        "protected Boolean applyToSalePrice = true;",
+        "protected Boolean applyToChildItems = false;",
+        "protected Boolean combinableWithOtherOffers = true;",
+        "protected Boolean automaticallyAdded = false;",
+        "protected Integer maxUsesPerOrder;",
+        "protected Long maxUsesPerCustomer;",
+        "protected String maxUsesStrategy;",
+        "protected Long minimumDaysPerUsage;",
+        "protected String offerItemQualifierRuleType;",
+        "protected BigDecimal qualifyingItemSubTotal;",
+        "protected BigDecimal orderMinSubTotal;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "OfferImpl",
+      "relationships": [
+        "@OneToMany"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/offer/domain/OfferImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "public static final String EXCLUDE_PRODUCT_CODE_COPY_HINT = \"exclude-product-pro",
+        "private static final Log LOG = LogFactory.getLog(ProductImpl.class);",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String url;",
+        "protected Boolean overrideGeneratedUrl = false;",
+        "protected String urlKey;",
+        "protected String displayTemplate;",
+        "protected String model;",
+        "protected String manufacturer;",
+        "protected Sku defaultSku;",
+        "protected Boolean canSellWithoutOptions = false;",
+        "protected String metaTitle;",
+        "protected String metaDescription;",
+        "protected String canonicalUrl;",
+        "protected List<Sku> skus = new ArrayList<>();",
+        "protected String promoMessage;",
+        "protected List<RelatedProduct> crossSaleProducts = new ArrayList<>();",
+        "protected List<RelatedProduct> upSaleProducts = new ArrayList<>();",
+        "protected List<Sku> additionalSkus = new ArrayList<>();",
+        "protected Category defaultCategory;",
+        "protected List<CategoryProductXref> allParentCategoryXrefs = new ArrayList<>();",
+        "protected List<ProductAttribute> productAttributes = new ArrayList<>();",
+        "protected List<ProductOptionXref> productOptions = new ArrayList<>();",
+        "protected Boolean enableDefaultSkuInventory = false;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/ProductImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "ProductImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "core/broadleaf-framework/src/main/java/org/broadleafcommerce/core/catalog/domain/ProductImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "public static final String SC_DONT_DUPLICATE_SC_TYPE_HINT = \"dont-duplicate-sc-t",
+        "private static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected String contentName;",
+        "protected Locale locale;",
+        "protected Integer priority;",
+        "protected Set<StructuredContentItemCriteria> qualifyingItemCriteria = new HashSe",
+        "protected StructuredContentType structuredContentType;",
+        "protected Map<String, StructuredContentFieldXref> structuredContentFields = new ",
+        "protected Boolean offlineFlag = false;",
+        "protected Map<String, String> fieldValuesMap = null;",
+        "public static final String Rules = \"StructuredContentImpl_Rules_Tab\";",
+        "public static final int Rules = 1000;",
+        "public static final String Description = \"StructuredContentImpl_Description\";",
+        "public static final String Internal = \"StructuredContentImpl_Internal\";",
+        "public static final String Rules = \"StructuredContentImpl_Rules\";",
+        "public static final int Description = 1000;",
+        "public static final int Internal = 2000;",
+        "public static final int Rules = 1000;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "StructuredContentImpl",
+      "relationships": [
+        "@OneToMany",
+        "@ManyToOne",
+        "@ManyToMany",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "public static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Integer quantity;",
+        "protected String orderItemMatchRule;",
+        "protected Page page;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/page/domain/PageItemCriteriaImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "PageItemCriteriaImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/page/domain/PageItemCriteriaImpl.java"
+    },
+    {
+      "confidence": "high",
+      "fields": [
+        "public static final long serialVersionUID = 1L;",
+        "protected Long id;",
+        "protected Integer quantity;",
+        "protected String orderItemMatchRule;",
+        "protected StructuredContent structuredContent;"
+      ],
+      "github_url": "https://github.com/johrenberger/BroadleafCommerce/blob/06a6ae1b8a1d6a716d10b997bef726fc066afe85/admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentItemCriteriaImpl.java",
+      "migration_source_type": "jpa-entity",
+      "name": "StructuredContentItemCriteriaImpl",
+      "relationships": [
+        "@ManyToOne",
+        "@JoinColumn"
+      ],
+      "source_file": "admin/broadleaf-contentmanagement-module/src/main/java/org/broadleafcommerce/cms/structure/domain/StructuredContentItemCriteriaImpl.java"
+    }
+  ],
+  "entities_total": 160,
+  "entities_truncated": false
+}
