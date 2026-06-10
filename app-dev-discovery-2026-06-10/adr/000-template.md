@@ -1,32 +1,60 @@
-# ADR-000: Architecture Decision Record Template
+# ADR-NNNN: <Title>
 
-> **Repository:** johrenberger/BroadleafCommerce
-> **Commit:** bb97830278d5912941aea36a372d3d4e87406e6a
-> **Discovery date:** 2026-06-10
+- **Status:** Proposed | Accepted | Deprecated | Superseded by ADR-XXXX
+- **Date:** YYYY-MM-DD
+- **Deciders:** <names / roles>
+- **Repo / Commit:** <repo>@<commit-sha>
+- **Source:** <commit-pinned URL>
 
-## Status
+## Context and Problem Statement
 
-Proposed | Accepted | Superseded | Deprecated
+<Describe the context and the problem in a few sentences. What forces are at play (technical, business, political, social)? Why is a decision required now?>
 
-## Context
+## Decision Drivers
 
-What is the situation, problem, or force driving this decision?
+- <driver 1>
+- <driver 2>
+- <driver 3>
 
-## Decision
+## Considered Options
 
-What was decided? State it as a single short sentence if possible, then
-expand on the reasoning.
+1. <option 1> — <one-line summary>
+2. <option 2> — <one-line summary>
+3. <option 3> — <one-line summary>
 
-## Consequences
+## Decision Outcome
 
-What tradeoffs, risks, follow-up actions, or impacts result from this decision?
+**Chosen option:** "<option N>", because <justification>.
 
-- **Positive:** ...
-- **Negative:** ...
-- **Follow-up:** ...
-- **Reversibility:** how hard is it to reverse this decision?
+### Positive Consequences
 
-## Evidence
+- <consequence 1>
+- <consequence 2>
 
-Links to code, documentation, issues, or external references that ground
-this decision. Commit-pin all URLs.
+### Negative Consequences
+
+- <consequence 1>
+- <consequence 2>
+
+## Pros and Cons of the Options
+
+### <option 1>
+
+- Good, because <reason>
+- Good, because <reason>
+- Bad, because <reason>
+
+### <option 2>
+
+- Good, because <reason>
+- Bad, because <reason>
+
+## Implementation Notes
+
+<Concrete steps required to land the decision, migrations, code anchors, or
+links to follow-up tickets. Use commit-pinned URLs where possible.>
+
+## Links / References
+
+- <reference 1>
+- <reference 2>
