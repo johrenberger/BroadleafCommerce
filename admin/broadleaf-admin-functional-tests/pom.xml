@@ -44,7 +44,7 @@
                     <excludes>
                         <exclude>**/browsertest/**</exclude>
                     </excludes>
-                    <argLine>${surefire.argLine}</argLine>
+                    <argLine>@{surefire.argLine}</argLine>
                 </configuration>
             </plugin>
             <plugin>
