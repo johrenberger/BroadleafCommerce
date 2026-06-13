@@ -113,7 +113,17 @@
                         <excludes>
                             <exclude>**/browsertest/**</exclude>
                         </excludes>
-                        <argLine>${surefire.argLine}</argLine>
+                        <!--
+                            Story 021: use surefire late-binding form `@{surefire.argLine}`
+                            (surefire >= 2.20) so JaCoCo's `prepare-agent` goal can inject the
+                            `-javaagent:.../jacoco.jar` flag into the test JVM at fork time.
+                            The previous static form `${surefire.argLine}` was expanded once
+                            when Maven parsed the pom, before JaCoCo could overwrite the
+                            property, so the agent was never picked up and no .exec was
+                            produced. See v2's preflight finding
+                            `static_surefire_argline_blocks_jacoco`.
+                        -->
+                        <argLine>@{surefire.argLine}</argLine>
                     </configuration>
                 </plugin>
                 <plugin>
