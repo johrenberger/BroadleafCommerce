@@ -57,6 +57,21 @@
                     <parameters>true</parameters>
                 </configuration>
             </plugin>
+            <!--
+                PIT (pitest.org) mutation testing. Opt-in via
+                `-P pitest` profile; not active by default to keep
+                normal builds fast. When active, runs PIT against
+                the common module's classes and produces an HTML
+                report under target/pit-reports/.
+                Usage: mvn -P pitest -pl common \
+                    org.pitest:pitest-maven:mutationCoverage \
+                    -DtargetClasses=org.broadleafcommerce.common.MergeManager
+            -->
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.15.8</version>
+            </plugin>
         </plugins>
         <resources>
             <resource>
